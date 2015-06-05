@@ -1,0 +1,18 @@
+<?xml version="1.0" ?><xliff version="1.1">
+  <file datatype="php" original="system/modules/advanced_classes/languages/en/default.php" source-language="en">
+    <body>
+      <trans-unit id="tl_settings.ac_legend">
+        <source>Advanced CSS-Einstellungen</source>
+        <target>Erweiterte CSS-Einstellungen</target>
+      </trans-unit>
+      <trans-unit id="tl_settings.advancedClassesSet.0">
+        <source>Advanced Classes Set</source>
+        <target>Erweitertes Klassen-Set</target>
+      </trans-unit>
+      <trans-unit id="tl_settings.advancedClassesSet.1">
+        <source>Here you can select the available sets.</source>
+        <target>Hier können Sie ein verfügbares Set auswählen.</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

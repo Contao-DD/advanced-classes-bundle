@@ -1,0 +1,30 @@
+<?xml version="1.0" ?><xliff version="1.1">
+  <file datatype="php" original="vendor/gondao/backend-bundle/src/Resources/contao/languages/en/default.php" source-language="en">
+    <body>
+      <trans-unit id="MOD.advanced_classes.0">
+        <source>Advanced Classes</source>
+        <target>Erweiterte CSS-Klassen</target>
+      </trans-unit>
+      <trans-unit id="MOD.advanced_classes.1">
+        <source>Extend the css classes of Contao elements.</source>
+        <target>Erweitert die CSS-Klassen der Contao Elemente.</target>
+      </trans-unit>
+      <trans-unit id="FMD.advanced_classes">
+        <source>Advanced Classes</source>
+        <target>Erweiterte CSS-Klassen</target>
+      </trans-unit>
+      <trans-unit id="tl_content.advanced_classes_legend">
+        <source>Advanced CSS classes</source>
+        <target>Erweiterte CSS-Klassen</target>
+      </trans-unit>
+      <trans-unit id="tl_content.advancedCss.0">
+        <source>Extended CSS Classes</source>
+        <target>Erweiterte CSS-Klassen</target>
+      </trans-unit>
+      <trans-unit id="tl_content.advancedCss.1">
+        <source>Here you can set css classes by a simple form</source>
+        <target>Über ein einfaches Formular kannst du dem Element weitere CSS-Klassen hinzufügen.</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
