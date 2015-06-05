@@ -1,11 +1,11 @@
 {
-  "name": "contao-advanced-classes",
-  "version": "0.2.0",
+  "name": "contao-dd/contao-advanced-bundle",
+  "version": "0.1.0",
   "description": "Extend the css classes of Contao elements",
   "scripts": {},
   "repository": {
     "type": "git",
-    "url": "https://github.com/Contao-DD/contao-advanced-classes.git"
+    "url": "https://github.com/Contao-DD/advanced-classes-bundle.git"
   },
   "keywords": [
     "Contao",
@@ -17,6 +17,6 @@
   "author": "Contao Stammtisch Dresden",
   "license": "LGPL-3.0+",
   "bugs": {
-    "url": "https://github.com/Contao-DD/contao-advanced-classes/issues"
+    "url": "https://github.com/Contao-DD/advanced-classes-bundle/issues"
   }
 }
