@@ -16,5 +16,5 @@ ClassLoader::addNamespaces(array
 ClassLoader::addClasses(array
 (
     // Classes
-    'ContaoDD\AdvancedClassesHooks'   => 'vendor/gondao/advancedclasses-bundle/src/Resources/contao/classes/AdvancedClassesHooks.php',
+    'ContaoDD\AdvancedClassesHooks'   => 'vendor/contao-dd/advanced-classes-bundle/src/Resources/contao/classes/AdvancedClassesHooks.php',
 ));
