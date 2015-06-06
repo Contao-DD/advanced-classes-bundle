@@ -20,5 +20,7 @@
     "psr-4": {
       "ContaoDD\\AdvancedClassesBundle\\": "src/"
     }
-  }
+  },
+  "prefer-stable": true,
+  "minimum-stability": "dev"
 }
