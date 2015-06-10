@@ -46,7 +46,7 @@ class tl_settings_advanced_classes extends Backend
      */
     public function getAvailableSetFiles()
     {
-        $strDir = TL_ROOT . '/web/bundles/gondaoadvancedclasses/sets/';
+        $strDir = TL_ROOT . '/web/bundles/contaoddadvancedclasses/sets/';
         $arrFiles = preg_grep('~\.(json)$~', scandir($strDir));
         $arrFiles = array_combine($arrFiles, $arrFiles);
         return $arrFiles;
