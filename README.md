@@ -1,6 +1,8 @@
 Contao Advanced Classes
 ======================
 
+[![Latest Stable Version](https://poser.pugx.org/contao-dd/advanced-classes-bundle/v/stable)](https://packagist.org/packages/contao-dd/advanced-classes-bundle) [![Total Downloads](https://poser.pugx.org/contao-dd/advanced-classes-bundle/downloads)](https://packagist.org/packages/contao-dd/advanced-classes-bundle) [![Latest Unstable Version](https://poser.pugx.org/contao-dd/advanced-classes-bundle/v/unstable)](https://packagist.org/packages/contao-dd/advanced-classes-bundle) [![License](https://poser.pugx.org/contao-dd/advanced-classes-bundle/license)](https://packagist.org/packages/contao-dd/advanced-classes-bundle)
+
 About
 -----
 
