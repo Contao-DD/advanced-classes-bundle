@@ -43,7 +43,7 @@
 
 #advancedFormContainer .value.select select {
     width: 85%;
-    height: 25px;
+    height: 32px;
 }
 #advancedFormContainer .value.select select option {
     padding: 4px 0;
