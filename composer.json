@@ -1,14 +1,21 @@
 {
   "name": "contao-dd/advanced-classes-bundle",
-  "type": "library",
+  "type":"contao-bundle",
   "description": "Contao 4 advanced classes bundle",
   "license": "LGPL-3.0+",
-  "authors": [
+  "authors":[
     {
-      "name": "Contao-Stammtisch Dresden",
-      "homepage": "https://github.com/Contao-DD"
+      "name":"Contao Stammtisch Dresden",
+      "homepage":"http://www.gondao.de",
+      "role":"Developer",
+      "email": "kontakt@gondao.de"
     }
   ],
+  "support" : {
+    "email" : "develop@pdir.de",
+    "issues" : "https://github.com/contao-dd/advanced-classes-bundle/issues",
+    "source" : "https://github.com/contao-dd/advanced-classes-bundle"
+  },
   "require": {
     "php": ">=5.4.0",
     "contao/core-bundle": "~4.0"
@@ -20,6 +27,9 @@
     "psr-4": {
       "ContaoDD\\AdvancedClassesBundle\\": "src/"
     }
+  },
+  "extra": {
+    "contao-manager-plugin": "ContaoDD\\AdvancedClassesBundle\\ContaoManagerPlugin"
   },
   "prefer-stable": true,
   "minimum-stability": "dev"
