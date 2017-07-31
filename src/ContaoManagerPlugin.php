@@ -28,9 +28,9 @@ class ContaoManagerPlugin implements BundlePluginInterface
 	public function getBundles(ParserInterface $parser)
 	{
 		return [
-			BundleConfig::create(AdvancedClassesBundle::class)
+			BundleConfig::create(ContaoDDAdvancedClassesBundle::class)
 				->setLoadAfter([ContaoCoreBundle::class])
-				->setReplace(['advanced_classes']),
+				->setReplace(['advancedclasses']),
 		];
 	}
 }
