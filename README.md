@@ -46,7 +46,7 @@ LGPL-3.0+
 
 History
 ---------------
-v0.3.0
+v0.4.0
 * new feature: default value for column widths
 * new feature: disable module CSS
 * add bootstrap sets
