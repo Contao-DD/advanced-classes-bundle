@@ -31,7 +31,7 @@ class AdvancedClassesHooks extends \Controller
     {
         if ($strTemplate == 'be_main')
         {
-            $strScript = "<script>var advancedClassesSet = '".$GLOBALS['TL_CONFIG']['advancedClassesSet']."';</script>\n\r</body>";
+            $strScript = "<script>var advancedClassesSet = '".$GLOBALS['TL_CONFIG']['advancedClassesSet']."';var defaultColumnWidth = '".$GLOBALS['TL_CONFIG']['ac_defaultColumnWidth']."';</script>\n\r</body>";
             return str_replace('</body>', $strScript, $strContent);
         }
         return $strContent;

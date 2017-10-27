@@ -1,0 +1,11 @@
+#pal_ac_legend .cbx {
+    overflow: hidden;
+}
+
+#pal_ac_legend .cbx:nth-of-type(even) {
+    clear: left;
+}
+
+#pal_ac_legend .w50 .tl_help {
+    margin-right: 0;
+}

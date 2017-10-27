@@ -5,7 +5,9 @@
             this.json = '';
             this.rootElem = $('#pal_advanced_classes_legend');
             if($('#ctrl_advancedCss').length) {
-                $.getJSON("bundles/contaoddadvancedclasses/sets/bootstrap.json")
+                var sourceSet = advancedClassesSet;
+                console.log(sourceSet);
+                $.getJSON(sourceSet)
                     .done(function (json) {
                         AdvancedClasses.json = json;
                         AdvancedClasses.buildForm();
@@ -14,7 +16,6 @@
                         AdvancedClasses.hideAdvancedCssInput();
                     }).fail(function (jqxhr, textStatus, error) {
                         var err = textStatus + ", " + error;
-                        console.log("Request Failed: " + err);
                     });
             }
         },
@@ -41,8 +42,17 @@
                     if (value.type == 'select') {
                         var select = '<div class="value ' + value.class + ' ' + value.type + '" for="advanced-form-' + value.id + '"><select id="advanced-form-' + value.id + '" name="advanced-form-' + value.id + '" class="tl_select tl_chosen"><option>-</option></option></select></div>';
                         $("#" + section.secId).append(select);
+                        var i = 1;
                         Object.keys(value.values).forEach(function (optKey) {
                             AdvancedClasses.formHelperGetOption(value.values[optKey], "#advanced-form-" + value.id);
+
+                            if(defaultColumnWidth == 1 && value.id == "columnSetSizeSelect1") {
+                                if(i == 12) {
+                                    var selected = value.values[optKey].value;
+                                    $("#advanced-form-columnSetSizeSelect1").val(selected);
+                                }
+                                ++i;
+                            }
                         });
                     }
 
@@ -60,7 +70,8 @@
             $(parentElem).append(option);
         },
         onChangeSelectFields: function () {
-            var previous = [];
+            var previous = [],
+                prefix = '';
             $("#advancedFormContainer select").on('focus', function () {
                 // store current value on focus and on change
                 previous[this.id] = this.value;
@@ -73,6 +84,10 @@
                     arrAdvancedCss.push(this.value);
                 }
                 else if(this.value == "-" && previous[this.id] != "") {
+                    if(advancedClassesSet == 'materialize.json') {// fix for materializecss
+                        // if(this.value.indexOf('.s') === -1 || this.value.indexOf('.m') === -1 || this.value.indexOf('.l') === -1)
+
+                    }
                     arrAdvancedCss.splice(del, 1);
                 } else
                     arrAdvancedCss.push(this.value);
@@ -86,16 +101,25 @@
         setSelectFieldsFromCss: function () {
             var advancedCss = $("#ctrl_advancedCss");
             if(typeof advancedCss != "undefined") {
+                var prefix = '';
+                var lastClass = '';
                 var arrAdvancedCss = advancedCss.val().split(" ");
                 arrAdvancedCss.forEach(function (cssClass) {
-                    $('#advancedFormContainer select option[value="' + cssClass + '"]').prop('selected', true).attr('selected', 'selected');
+                    if(advancedClassesSet == 'materialize.json') {// fix for materializecss
+                        if(cssClass.indexOf('.s') === -1 || cssClass.indexOf('.m') === -1 || cssClass.indexOf('.l') === -1)
+                            prefix = 'col ';
+                    }
+                    $('#advancedFormContainer select option[value="' + prefix + cssClass + '"]')
+                        .prop('selected', true)
+                        .attr('selected', 'selected');
+                    lastClass = cssClass;
                 });
             }
         },
         hideAdvancedCssInput: function() {
             this.rootElem.children("div").first().hide();
         }
-    }
+    };
 
     $(document).ready(function () {
         AdvancedClasses.onReady()

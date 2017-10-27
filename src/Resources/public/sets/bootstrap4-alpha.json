@@ -1,0 +1,1264 @@
+{
+  "title": "Bootstrap 4 Alpha",
+  "version": "4.0.0-alpha.2",
+  "sections": {
+    "1": {
+      "secId": "columnSetSize",
+      "secHeadline": "Spaltenbreiten festlegen",
+      "secClass": "icon-th-large",
+      "cssSet": {
+        "1": {
+          "id": "columnSetSizeSelect1",
+          "class": "icon-mobile ac-w20",
+          "type": "select",
+          "values": {
+            "1": {
+              "title": ".col-1",
+              "value": "col-1"
+            },
+            "2": {
+              "title": ".col-2",
+              "value": "col-2"
+            },
+            "3": {
+              "title": ".col-3",
+              "value": "col-3"
+            },
+            "4": {
+              "title": ".col-4",
+              "value": "col-4"
+            },
+            "5": {
+              "title": ".col-5",
+              "value": "col-5"
+            },
+            "6": {
+              "title": ".col-6",
+              "value": "col-6"
+            },
+            "7": {
+              "title": ".col-7",
+              "value": "col-7"
+            },
+            "8": {
+              "title": ".col-8",
+              "value": "col-8"
+            },
+            "9": {
+              "title": ".col-9",
+              "value": "col-9"
+            },
+            "10": {
+              "title": ".col-10",
+              "value": "col-10"
+            },
+            "11": {
+              "title": ".col-11",
+              "value": "col-11"
+            },
+            "12": {
+              "title": ".col-12",
+              "value": "col-12"
+            }
+          }
+        },
+        "2": {
+          "id": "columnSetSizeSelect2",
+          "class": "icon-mobile landscape ac-w20",
+          "type": "select",
+          "values": {
+            "1": {
+              "title": ".col-sm-1",
+              "value": "col-sm-1"
+            },
+            "2": {
+              "title": ".col-sm-2",
+              "value": "col-sm-2"
+            },
+            "3": {
+              "title": ".col-sm-3",
+              "value": "col-sm-3"
+            },
+            "4": {
+              "title": ".col-sm-4",
+              "value": "col-sm-4"
+            },
+            "5": {
+              "title": ".col-sm-5",
+              "value": "col-sm-5"
+            },
+            "6": {
+              "title": ".col-sm-6",
+              "value": "col-sm-6"
+            },
+            "7": {
+              "title": ".col-sm-7",
+              "value": "col-sm-7"
+            },
+            "8": {
+              "title": ".col-sm-8",
+              "value": "col-sm-8"
+            },
+            "9": {
+              "title": ".col-sm-9",
+              "value": "col-sm-9"
+            },
+            "10": {
+              "title": ".col-sm-10",
+              "value": "col-sm-10"
+            },
+            "11": {
+              "title": ".col-sm-11",
+              "value": "col-sm-11"
+            },
+            "12": {
+              "title": ".col-sm-12",
+              "value": "col-sm-12"
+            }
+          }
+        },
+        "3": {
+          "id": "columnSetSizeSelect3",
+          "class": "icon-tablet ac-w20",
+          "type": "select",
+          "values": {
+            "1": {
+              "title": ".col-md-1",
+              "value": "col-md-1"
+            },
+            "2": {
+              "title": ".col-md-2",
+              "value": "col-md-2"
+            },
+            "3": {
+              "title": ".col-md-3",
+              "value": "col-md-3"
+            },
+            "4": {
+              "title": ".col-md-4",
+              "value": "col-md-4"
+            },
+            "5": {
+              "title": ".col-md-5",
+              "value": "col-md-5"
+            },
+            "6": {
+              "title": ".col-md-6",
+              "value": "col-md-6"
+            },
+            "7": {
+              "title": ".col-md-7",
+              "value": "col-md-7"
+            },
+            "8": {
+              "title": ".col-md-8",
+              "value": "col-md-8"
+            },
+            "9": {
+              "title": ".col-md-9",
+              "value": "col-md-9"
+            },
+            "10": {
+              "title": ".col-md-10",
+              "value": "col-md-10"
+            },
+            "11": {
+              "title": ".col-md-11",
+              "value": "col-md-11"
+            },
+            "12": {
+              "title": ".col-md-12",
+              "value": "col-md-12"
+            }
+          }
+        },
+        "4": {
+          "id": "columnSetSizeSelect4",
+          "class": "icon-laptop ac-w20",
+          "type": "select",
+          "values": {
+            "1": {
+              "title": ".col-lg-1",
+              "value": "col-lg-1"
+            },
+            "2": {
+              "title": ".col-lg-2",
+              "value": "col-lg-2"
+            },
+            "3": {
+              "title": ".col-lg-3",
+              "value": "col-lg-3"
+            },
+            "4": {
+              "title": ".col-lg-4",
+              "value": "col-lg-4"
+            },
+            "5": {
+              "title": ".col-lg-5",
+              "value": "col-lg-5"
+            },
+            "6": {
+              "title": ".col-lg-6",
+              "value": "col-lg-6"
+            },
+            "7": {
+              "title": ".col-lg-7",
+              "value": "col-lg-7"
+            },
+            "8": {
+              "title": ".col-lg-8",
+              "value": "col-lg-8"
+            },
+            "9": {
+              "title": ".col-lg-9",
+              "value": "col-lg-9"
+            },
+            "10": {
+              "title": ".col-lg-10",
+              "value": "col-lg-10"
+            },
+            "11": {
+              "title": ".col-lg-11",
+              "value": "col-lg-11"
+            },
+            "12": {
+              "title": ".col-lg-12",
+              "value": "col-lg-12"
+            }
+          }
+        },
+        "5": {
+          "id": "columnSetSizeSelect5",
+          "class": "icon-desktop ac-w20",
+          "type": "select",
+          "values": {
+            "1": {
+              "title": ".col-xl-1",
+              "value": "col-xl-1"
+            },
+            "2": {
+              "title": ".col-xl-2",
+              "value": "col-xl-2"
+            },
+            "3": {
+              "title": ".col-xl-3",
+              "value": "col-xl-3"
+            },
+            "4": {
+              "title": ".col-xl-4",
+              "value": "col-xl-4"
+            },
+            "5": {
+              "title": ".col-xl-5",
+              "value": "col-xl-5"
+            },
+            "6": {
+              "title": ".col-xl-6",
+              "value": "col-xl-6"
+            },
+            "7": {
+              "title": ".col-xl-7",
+              "value": "col-xl-7"
+            },
+            "8": {
+              "title": ".col-xl-8",
+              "value": "col-xl-8"
+            },
+            "9": {
+              "title": ".col-xl-9",
+              "value": "col-xl-9"
+            },
+            "10": {
+              "title": ".col-xl-10",
+              "value": "col-xl-10"
+            },
+            "11": {
+              "title": ".col-xl-11",
+              "value": "col-xl-11"
+            },
+            "12": {
+              "title": ".col-xl-12",
+              "value": "col-xl-12"
+            }
+          }
+        }
+      }
+    },
+    "2": {
+      "secId": "columnSetOffset",
+      "secHeadline": "Spalten-Offset festlegen",
+      "secClass": "icon-indent-right",
+      "cssSet": {
+        "1": {
+          "id": "columnSetOffsetSelect1",
+          "class": "icon-mobile ac-w20",
+          "type": "select",
+          "values": {
+            "1": {
+              "title": ".offset-0",
+              "value": "offset-0"
+            },
+            "2": {
+              "title": ".offset-1",
+              "value": "offset-1"
+            },
+            "3": {
+              "title": ".offset-2",
+              "value": "offset-2"
+            },
+            "4": {
+              "title": ".offset-3",
+              "value": "offset-3"
+            },
+            "5": {
+              "title": ".offset-4",
+              "value": "offset-4"
+            },
+            "6": {
+              "title": ".offset-5",
+              "value": "offset-5"
+            },
+            "7": {
+              "title": ".offset-6",
+              "value": "offset-6"
+            },
+            "8": {
+              "title": ".offset-7",
+              "value": "offset-7"
+            },
+            "9": {
+              "title": ".offset-8",
+              "value": "offset-8"
+            },
+            "10": {
+              "title": ".offset-9",
+              "value": "offset-9"
+            },
+            "11": {
+              "title": ".offset-10",
+              "value": "offset-10"
+            },
+            "12": {
+              "title": ".offset-11",
+              "value": "offset-11"
+            },
+            "13": {
+              "title": ".offset-12",
+              "value": "offset-12"
+            }
+          }
+        },
+        "2": {
+          "id": "columnSetOffsetSelect2",
+          "class": "icon-mobile landscape ac-w20",
+          "type": "select",
+          "values": {
+            "1": {
+              "title": ".offset-sm-0",
+              "value": "offset-sm-0"
+            },
+            "2": {
+              "title": ".offset-sm-1",
+              "value": "offset-sm-1"
+            },
+            "3": {
+              "title": ".offset-sm-2",
+              "value": "offset-sm-2"
+            },
+            "4": {
+              "title": ".offset-sm-3",
+              "value": "offset-sm-3"
+            },
+            "5": {
+              "title": ".offset-sm-4",
+              "value": "offset-sm-4"
+            },
+            "6": {
+              "title": ".offset-sm-5",
+              "value": "offset-sm-5"
+            },
+            "7": {
+              "title": ".offset-sm-6",
+              "value": "offset-sm-6"
+            },
+            "8": {
+              "title": ".offset-sm-7",
+              "value": "offset-sm-7"
+            },
+            "9": {
+              "title": ".offset-sm-8",
+              "value": "offset-sm-8"
+            },
+            "10": {
+              "title": ".offset-sm-9",
+              "value": "offset-sm-9"
+            },
+            "11": {
+              "title": ".offset-sm-10",
+              "value": "offset-sm-10"
+            },
+            "12": {
+              "title": ".offset-sm-11",
+              "value": "offset-sm-11"
+            },
+            "13": {
+              "title": ".offset-sm-12",
+              "value": "offset-sm-12"
+            }
+          }
+        },
+        "3": {
+          "id": "columnSetOffsetSelect3",
+          "class": "icon-tablet ac-w20",
+          "type": "select",
+          "values": {
+            "1": {
+              "title": ".offset-md-0",
+              "value": "offset-md-0"
+            },
+            "2": {
+              "title": ".offset-md-1",
+              "value": "offset-md-1"
+            },
+            "3": {
+              "title": ".offset-md-2",
+              "value": "offset-md-2"
+            },
+            "4": {
+              "title": ".offset-md-3",
+              "value": "offset-md-3"
+            },
+            "5": {
+              "title": ".offset-md-4",
+              "value": "offset-md-4"
+            },
+            "6": {
+              "title": ".offset-md-5",
+              "value": "offset-md-5"
+            },
+            "7": {
+              "title": ".offset-md-6",
+              "value": "offset-md-6"
+            },
+            "8": {
+              "title": ".offset-md-7",
+              "value": "offset-md-7"
+            },
+            "9": {
+              "title": ".offset-md-8",
+              "value": "offset-md-8"
+            },
+            "10": {
+              "title": ".offset-md-9",
+              "value": "offset-md-9"
+            },
+            "11": {
+              "title": ".offset-md-10",
+              "value": "offset-md-10"
+            },
+            "12": {
+              "title": ".offset-md-11",
+              "value": "offset-md-11"
+            },
+            "13": {
+              "title": ".offset-md-12",
+              "value": "offset-md-12"
+            }
+          }
+        },
+        "4": {
+          "id": "columnSetOffsetSelect4",
+          "class": "icon-laptop ac-w20",
+          "type": "select",
+          "values": {
+            "1": {
+              "title": ".offset-lg-0",
+              "value": "offset-lg-0"
+            },
+            "2": {
+              "title": ".offset-lg-1",
+              "value": "offset-lg-1"
+            },
+            "3": {
+              "title": ".offset-lg-2",
+              "value": "offset-lg-2"
+            },
+            "4": {
+              "title": ".offset-lg-3",
+              "value": "offset-lg-3"
+            },
+            "5": {
+              "title": ".offset-lg-4",
+              "value": "offset-lg-4"
+            },
+            "6": {
+              "title": ".offset-lg-5",
+              "value": "offset-lg-5"
+            },
+            "7": {
+              "title": ".offset-lg-6",
+              "value": "offset-lg-6"
+            },
+            "8": {
+              "title": ".offset-lg-7",
+              "value": "offset-lg-7"
+            },
+            "9": {
+              "title": ".offset-lg-8",
+              "value": "offset-lg-8"
+            },
+            "10": {
+              "title": ".offset-lg-9",
+              "value": "offset-lg-9"
+            },
+            "11": {
+              "title": ".offset-lg-10",
+              "value": "offset-lg-10"
+            },
+            "12": {
+              "title": ".offset-lg-11",
+              "value": "offset-lg-11"
+            },
+            "13": {
+              "title": ".offset-lg-12",
+              "value": "offset-lg-12"
+            }
+          }
+        },
+        "5": {
+          "id": "columnSetOffsetSelect5",
+          "class": "icon-desktop ac-w20",
+          "type": "select",
+          "values": {
+            "1": {
+              "title": ".offset-xl-0",
+              "value": "offset-xl-0"
+            },
+            "2": {
+              "title": ".offset-xl-1",
+              "value": "offset-xl-1"
+            },
+            "3": {
+              "title": ".offset-xl-2",
+              "value": "offset-xl-2"
+            },
+            "4": {
+              "title": ".offset-xl-3",
+              "value": "offset-xl-3"
+            },
+            "5": {
+              "title": ".offset-xl-4",
+              "value": "offset-xl-4"
+            },
+            "6": {
+              "title": ".offset-xl-5",
+              "value": "offset-xl-5"
+            },
+            "7": {
+              "title": ".offset-xl-6",
+              "value": "offset-xl-6"
+            },
+            "8": {
+              "title": ".offset-xl-7",
+              "value": "offset-xl-7"
+            },
+            "9": {
+              "title": ".offset-xl-8",
+              "value": "offset-xl-8"
+            },
+            "10": {
+              "title": ".offset-xl-9",
+              "value": "offset-xl-9"
+            },
+            "11": {
+              "title": ".offset-xl-10",
+              "value": "offset-xl-10"
+            },
+            "12": {
+              "title": ".offset-xl-11",
+              "value": "offset-xl-11"
+            },
+            "13": {
+              "title": ".offset-xl-12",
+              "value": "offset-xl-12"
+            }
+          }
+        }
+      }
+    },
+    "3":{
+      "secId":"columnSetPushPull",
+      "secHeadline":"Reihenfolge ändern (Push/Pull)",
+      "secClass":"icon-exchange",
+      "cssSet":{
+        "1":{
+          "id":"columnSetPushPullSelect1",
+          "class":"icon-mobile ac-w20",
+          "type":"select",
+          "values":{
+            "1":{
+              "title":".push-0",
+              "value":"push-0"
+            },
+            "2":{
+              "title":".push-1",
+              "value":"push-1"
+            },
+            "3":{
+              "title":".push-2",
+              "value":"push-2"
+            },
+            "4":{
+              "title":".push-3",
+              "value":"push-3"
+            },
+            "5":{
+              "title":".push-4",
+              "value":"push-4"
+            },
+            "6":{
+              "title":".push-5",
+              "value":"push-5"
+            },
+            "7":{
+              "title":".push-6",
+              "value":"push-6"
+            },
+            "8":{
+              "title":".push-7",
+              "value":"push-7"
+            },
+            "9":{
+              "title":".push-8",
+              "value":"push-8"
+            },
+            "10":{
+              "title":".push-9",
+              "value":"push-9"
+            },
+            "11":{
+              "title":".push-10",
+              "value":"push-10"
+            },
+            "12":{
+              "title":".push-11",
+              "value":"push-11"
+            },
+            "13":{
+              "title":".push-12",
+              "value":"push-12"
+            },
+            "14":{
+              "title":".pull-0",
+              "value":"pull-0"
+            },
+            "15":{
+              "title":".pull-1",
+              "value":"pull-1"
+            },
+            "16":{
+              "title":".pull-2",
+              "value":"pull-2"
+            },
+            "17":{
+              "title":".pull-3",
+              "value":"pull-3"
+            },
+            "18":{
+              "title":".pull-4",
+              "value":"pull-4"
+            },
+            "19":{
+              "title":".pull-5",
+              "value":"pull-5"
+            },
+            "20":{
+              "title":".pull-6",
+              "value":"pull-6"
+            },
+            "21":{
+              "title":".pull-7",
+              "value":"pull-7"
+            },
+            "22":{
+              "title":".pull-8",
+              "value":"pull-8"
+            },
+            "23":{
+              "title":".pull-9",
+              "value":"pull-9"
+            },
+            "24":{
+              "title":".pull-10",
+              "value":"pull-10"
+            },
+            "25":{
+              "title":".pull-11",
+              "value":"pull-11"
+            },
+            "26":{
+              "title":".pull-12",
+              "value":"pull-12"
+            }
+          }
+        },
+        "2":{
+          "id":"columnSetPushPullSelect2",
+          "class":"icon-mobile landscape ac-w20",
+          "type":"select",
+          "values":{
+            "1":{
+              "title":".push-sm-0",
+              "value":"push-sm-0"
+            },
+            "2":{
+              "title":".push-sm-1",
+              "value":"push-sm-1"
+            },
+            "3":{
+              "title":".push-sm-2",
+              "value":"push-sm-2"
+            },
+            "4":{
+              "title":".push-sm-3",
+              "value":"push-sm-3"
+            },
+            "5":{
+              "title":".push-sm-4",
+              "value":"push-sm-4"
+            },
+            "6":{
+              "title":".push-sm-5",
+              "value":"push-sm-5"
+            },
+            "7":{
+              "title":".push-sm-6",
+              "value":"push-sm-6"
+            },
+            "8":{
+              "title":".push-sm-7",
+              "value":"push-sm-7"
+            },
+            "9":{
+              "title":".push-sm-8",
+              "value":"push-sm-8"
+            },
+            "10":{
+              "title":".push-sm-9",
+              "value":"push-sm-9"
+            },
+            "11":{
+              "title":".push-sm-10",
+              "value":"push-sm-10"
+            },
+            "12":{
+              "title":".push-sm-11",
+              "value":"push-sm-11"
+            },
+            "13":{
+              "title":".push-sm-12",
+              "value":"push-sm-12"
+            },
+            "14":{
+              "title":".pull-sm-0",
+              "value":"pull-sm-0"
+            },
+            "15":{
+              "title":".pull-sm-1",
+              "value":"pull-sm-1"
+            },
+            "16":{
+              "title":".pull-sm-2",
+              "value":"pull-sm-2"
+            },
+            "17":{
+              "title":".pull-sm-3",
+              "value":"pull-sm-3"
+            },
+            "18":{
+              "title":".pull-sm-4",
+              "value":"pull-sm-4"
+            },
+            "19":{
+              "title":".pull-sm-5",
+              "value":"pull-sm-5"
+            },
+            "20":{
+              "title":".pull-sm-6",
+              "value":"pull-sm-6"
+            },
+            "21":{
+              "title":".pull-sm-7",
+              "value":"pull-sm-7"
+            },
+            "22":{
+              "title":".pull-sm-8",
+              "value":"pull-sm-8"
+            },
+            "23":{
+              "title":".pull-sm-9",
+              "value":"pull-sm-9"
+            },
+            "24":{
+              "title":".pull-sm-10",
+              "value":"pull-sm-10"
+            },
+            "25":{
+              "title":".pull-sm-11",
+              "value":"pull-sm-11"
+            },
+            "26":{
+              "title":".pull-sm-12",
+              "value":"pull-sm-12"
+            }
+          }
+        },
+        "3":{
+          "id":"columnSetPushPullSelect3",
+          "class":"icon-tablet ac-w20",
+          "type":"select",
+          "values":{
+            "1":{
+              "title":".push-md-0",
+              "value":"push-md-0"
+            },
+            "2":{
+              "title":".push-md-1",
+              "value":"push-md-1"
+            },
+            "3":{
+              "title":".push-md-2",
+              "value":"push-md-2"
+            },
+            "4":{
+              "title":".push-md-3",
+              "value":"push-md-3"
+            },
+            "5":{
+              "title":".push-md-4",
+              "value":"push-md-4"
+            },
+            "6":{
+              "title":".push-md-5",
+              "value":"push-md-5"
+            },
+            "7":{
+              "title":".push-md-6",
+              "value":"push-md-6"
+            },
+            "8":{
+              "title":".push-md-7",
+              "value":"push-md-7"
+            },
+            "9":{
+              "title":".push-md-8",
+              "value":"push-md-8"
+            },
+            "10":{
+              "title":".push-md-9",
+              "value":"push-md-9"
+            },
+            "11":{
+              "title":".push-md-10",
+              "value":"push-md-10"
+            },
+            "12":{
+              "title":".push-md-11",
+              "value":"push-md-11"
+            },
+            "13":{
+              "title":".push-md-12",
+              "value":"push-md-12"
+            },
+            "14":{
+              "title":".pull-md-0",
+              "value":"pull-md-0"
+            },
+            "15":{
+              "title":".pull-md-1",
+              "value":"pull-md-1"
+            },
+            "16":{
+              "title":".pull-md-2",
+              "value":"pull-md-2"
+            },
+            "17":{
+              "title":".pull-md-3",
+              "value":"pull-md-3"
+            },
+            "18":{
+              "title":".pull-md-4",
+              "value":"pull-md-4"
+            },
+            "19":{
+              "title":".pull-md-5",
+              "value":"pull-md-5"
+            },
+            "20":{
+              "title":".pull-md-6",
+              "value":"pull-md-6"
+            },
+            "21":{
+              "title":".pull-md-7",
+              "value":"pull-md-7"
+            },
+            "22":{
+              "title":".pull-md-8",
+              "value":"pull-md-8"
+            },
+            "23":{
+              "title":".pull-md-9",
+              "value":"pull-md-9"
+            },
+            "24":{
+              "title":".pull-md-10",
+              "value":"pull-md-10"
+            },
+            "25":{
+              "title":".pull-md-11",
+              "value":"pull-md-11"
+            },
+            "26":{
+              "title":".pull-md-12",
+              "value":"pull-md-12"
+            }
+          }
+        },
+        "4":{
+          "id":"columnSetPushPullSelect4",
+          "class":"icon-laptop ac-w20",
+          "type":"select",
+          "values":{
+            "1":{
+              "title":".push-lg-0",
+              "value":"push-lg-0"
+            },
+            "2":{
+              "title":".push-lg-1",
+              "value":"push-lg-1"
+            },
+            "3":{
+              "title":".push-lg-2",
+              "value":"push-lg-2"
+            },
+            "4":{
+              "title":".push-lg-3",
+              "value":"push-lg-3"
+            },
+            "5":{
+              "title":".push-lg-4",
+              "value":"push-lg-4"
+            },
+            "6":{
+              "title":".push-lg-5",
+              "value":"push-lg-5"
+            },
+            "7":{
+              "title":".push-lg-6",
+              "value":"push-lg-6"
+            },
+            "8":{
+              "title":".push-lg-7",
+              "value":"push-lg-7"
+            },
+            "9":{
+              "title":".push-lg-8",
+              "value":"push-lg-8"
+            },
+            "10":{
+              "title":".push-lg-9",
+              "value":"push-lg-9"
+            },
+            "11":{
+              "title":".push-lg-10",
+              "value":"push-lg-10"
+            },
+            "12":{
+              "title":".push-lg-11",
+              "value":"push-lg-11"
+            },
+            "13":{
+              "title":".push-lg-12",
+              "value":"push-lg-12"
+            },
+            "14":{
+              "title":".pull-lg-0",
+              "value":"pull-lg-0"
+            },
+            "15":{
+              "title":".pull-lg-1",
+              "value":"pull-lg-1"
+            },
+            "16":{
+              "title":".pull-lg-2",
+              "value":"pull-lg-2"
+            },
+            "17":{
+              "title":".pull-lg-3",
+              "value":"pull-lg-3"
+            },
+            "18":{
+              "title":".pull-lg-4",
+              "value":"pull-lg-4"
+            },
+            "19":{
+              "title":".pull-lg-5",
+              "value":"pull-lg-5"
+            },
+            "20":{
+              "title":".pull-lg-6",
+              "value":"pull-lg-6"
+            },
+            "21":{
+              "title":".pull-lg-7",
+              "value":"pull-lg-7"
+            },
+            "22":{
+              "title":".pull-lg-8",
+              "value":"pull-lg-8"
+            },
+            "23":{
+              "title":".pull-lg-9",
+              "value":"pull-lg-9"
+            },
+            "24":{
+              "title":".pull-lg-10",
+              "value":"pull-lg-10"
+            },
+            "25":{
+              "title":".pull-lg-11",
+              "value":"pull-lg-11"
+            },
+            "26":{
+              "title":".pull-lg-12",
+              "value":"pull-lg-12"
+            }
+          }
+        },
+        "5":{
+          "id":"columnSetPushPullSelect5",
+          "class":"icon-desktop ac-w20",
+          "type":"select",
+          "values":{
+            "1":{
+              "title":".push-xl-0",
+              "value":"push-xl-0"
+            },
+            "2":{
+              "title":".push-xl-1",
+              "value":"push-xl-1"
+            },
+            "3":{
+              "title":".push-xl-2",
+              "value":"push-xl-2"
+            },
+            "4":{
+              "title":".push-xl-3",
+              "value":"push-xl-3"
+            },
+            "5":{
+              "title":".push-xl-4",
+              "value":"push-xl-4"
+            },
+            "6":{
+              "title":".push-xl-5",
+              "value":"push-xl-5"
+            },
+            "7":{
+              "title":".push-xl-6",
+              "value":"push-xl-6"
+            },
+            "8":{
+              "title":".push-xl-7",
+              "value":"push-xl-7"
+            },
+            "9":{
+              "title":".push-xl-8",
+              "value":"push-xl-8"
+            },
+            "10":{
+              "title":".push-xl-9",
+              "value":"push-xl-9"
+            },
+            "11":{
+              "title":".push-xl-10",
+              "value":"push-xl-10"
+            },
+            "12":{
+              "title":".push-xl-11",
+              "value":"push-xl-11"
+            },
+            "13":{
+              "title":".push-xl-12",
+              "value":"push-xl-12"
+            },
+            "14":{
+              "title":".pull-xl-0",
+              "value":"pull-xl-0"
+            },
+            "15":{
+              "title":".pull-xl-1",
+              "value":"pull-xl-1"
+            },
+            "16":{
+              "title":".pull-xl-2",
+              "value":"pull-xl-2"
+            },
+            "17":{
+              "title":".pull-xl-3",
+              "value":"pull-xl-3"
+            },
+            "18":{
+              "title":".pull-xl-4",
+              "value":"pull-xl-4"
+            },
+            "19":{
+              "title":".pull-xl-5",
+              "value":"pull-xl-5"
+            },
+            "20":{
+              "title":".pull-xl-6",
+              "value":"pull-xl-6"
+            },
+            "21":{
+              "title":".pull-xl-7",
+              "value":"pull-xl-7"
+            },
+            "22":{
+              "title":".pull-xl-8",
+              "value":"pull-xl-8"
+            },
+            "23":{
+              "title":".pull-xl-9",
+              "value":"pull-xl-9"
+            },
+            "24":{
+              "title":".pull-xl-10",
+              "value":"pull-xl-10"
+            },
+            "25":{
+              "title":".pull-xl-11",
+              "value":"pull-xl-11"
+            },
+            "26":{
+              "title":".pull-xl-12",
+              "value":"pull-xl-12"
+            }
+          }
+        }
+      }
+    },
+    "4":{
+      "secId":"columnSetVisibility",
+      "secHeadline":"Sichtbarkeit ändern (< Hidden >)",
+      "secClass":"icon-eye",
+      "cssSet":{
+        "1":{
+          "id":"columnSetVisibilitySelect1",
+          "class":"icon-mobile ac-w20",
+          "type":"select",
+          "values":{
+            "1":{
+              "title":".hidden-xs-down (Unsichtbar <=)",
+              "value":"hidden-xs-down"
+            },
+            "2":{
+              "title":".hidden-xs-up (Unsichtbar >=)",
+              "value":"hidden-xs-up"
+            }
+          }
+        },
+        "2":{
+          "id":"columnSetVisibilitySelect2",
+          "class":"icon-mobile landscape ac-w20",
+          "type":"select",
+          "values":{
+            "1":{
+              "title":".hidden-sm-down (Unsichtbar <=)",
+              "value":"hidden-sm-down"
+            },
+            "2":{
+              "title":".hidden-sm-up (Unsichtbar >=)",
+              "value":"hidden-sm-up"
+            }
+          }
+        },
+        "3":{
+          "id":"columnSetVisibilitySelect3",
+          "class":"icon-tablet ac-w20",
+          "type":"select",
+          "values":{
+            "1":{
+              "title":".hidden-md-down (Unsichtbar <=)",
+              "value":"hidden-md-down"
+            },
+            "2":{
+              "title":".hidden-md-up (Unsichtbar >=)",
+              "value":"hidden-md-up"
+            }
+          }
+        },
+        "4":{
+          "id":"columnSetVisibilitySelect4",
+          "class":"icon-laptop ac-w20",
+          "type":"select",
+          "values":{
+            "1":{
+              "title":".hidden-sm-down (Unsichtbar <=)",
+              "value":"hidden-sm-down"
+            },
+            "2":{
+              "title":".hidden-sm-up (Unsichtbar >=)",
+              "value":"hidden-sm-up"
+            }
+          }
+        },
+        "5":{
+          "id":"columnSetVisibilitySelect5",
+          "class":"icon-desktop ac-w20",
+          "type":"select",
+          "values":{
+            "1":{
+              "title":".hidden-sm-down (Unsichtbar <=)",
+              "value":"hidden-sm-down"
+            },
+            "2":{
+              "title":".hidden-sm-up (Unsichtbar >=)",
+              "value":"hidden-sm-up"
+            }
+          }
+        }
+      }
+    },
+    "5":{
+      "secId":"columnSetPrint",
+      "secHeadline":"Inhalte für Print",
+      "secClass":"icon-print",
+      "cssSet":{
+        "1":{
+          "id":"columnSetPrintSelect1",
+          "class":"icon-eye ac-w20",
+          "type":"select",
+          "values":{
+            "1":{
+              "title":".visible-print-block",
+              "value":"visible-print-block"
+            },
+            "2":{
+              "title":".visible-print-inline",
+              "value":"visible-print-inline"
+            },
+            "3":{
+              "title":".visible-print-inline",
+              "value":"visible-print-inline"
+            },
+            "4":{
+              "title":".hidden-print",
+              "value":"hidden-print"
+            }
+          }
+        }
+      }
+    }
+  }
+}

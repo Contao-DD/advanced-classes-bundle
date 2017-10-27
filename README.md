@@ -15,8 +15,8 @@ headline, text, list, table, accordion, slider, code, markdown, hyperlink, topli
 Screenshot
 -----------
 
-![Setting classes for bootstrap](http://pdir.de/contao-dd/Bootstrap-Mockup.png)
-![Local settings](http://pdir.de/contao-dd/screenshot-settings-cac.png)
+![Setting classes for bootstrap](http://pdir.de/contao-dd/advanced-classes-screenshot1-contao4.png)
+![Local settings](http://pdir.de/contao-dd/advanced-classes-screenshot2-contao4.png)
 
 
 System requirements
@@ -44,14 +44,15 @@ License
 LGPL-3.0+
 
 
-ToDo
----------------
-* add other sets
-
-
 History
 ---------------
-*[done] add basic elements
-*[done] add select option for sets in default settings 
-*[done] add great form to simple add bootstrap classes (reusable for other frameworks!!!) :) 
-*[done] add active/inactive option for module to local config section
+v0.3.0
+* new feature: default value for column widths
+* new feature: disable module CSS
+* add bootstrap sets
+
+
+* [done] add basic elements
+* [done] add select option for sets in default settings 
+* [done] add great form to simple add bootstrap classes (reusable for other frameworks!!!) :) 
+* [done] add active/inactive option for module to local config section
