@@ -70,6 +70,10 @@
     -ms-transform: rotate(90deg);
 }
 
+#advancedFormContainer .tl_select {
+    max-width: 100%;
+}
+
 @media (max-width: 767px) {
     #advancedFormContainer .value.select {
         width: 49%;
