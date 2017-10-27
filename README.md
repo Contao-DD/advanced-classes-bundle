@@ -51,7 +51,7 @@ v0.3.0
 * new feature: disable module CSS
 * add bootstrap sets
 
-
+before
 * [done] add basic elements
 * [done] add select option for sets in default settings 
 * [done] add great form to simple add bootstrap classes (reusable for other frameworks!!!) :) 
