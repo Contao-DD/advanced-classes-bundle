@@ -23,6 +23,7 @@ if(TL_MODE == 'BE')
     $GLOBALS['TL_CONFIG']['advancedClassesSets'][] = $modulePath . 'bundles/contaoddadvancedclasses/sets/bootstrap3.json';
     $GLOBALS['TL_CONFIG']['advancedClassesSets'][] = $modulePath . 'bundles/contaoddadvancedclasses/sets/bootstrap4-alpha.json';
     $GLOBALS['TL_CONFIG']['advancedClassesSets'][] = $modulePath . 'bundles/contaoddadvancedclasses/sets/bootstrap4.json';
+    $GLOBALS['TL_CONFIG']['advancedClassesSets'][] = $modulePath . 'bundles/contaoddadvancedclasses/sets/materialize.json';
 }
 
 /**
