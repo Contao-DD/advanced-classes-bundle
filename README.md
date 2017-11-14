@@ -3,6 +3,13 @@ Contao Advanced Classes
 
 [![Latest Stable Version](https://poser.pugx.org/contao-dd/advanced-classes-bundle/v/stable)](https://packagist.org/packages/contao-dd/advanced-classes-bundle) [![Total Downloads](https://poser.pugx.org/contao-dd/advanced-classes-bundle/downloads)](https://packagist.org/packages/contao-dd/advanced-classes-bundle) [![Latest Unstable Version](https://poser.pugx.org/contao-dd/advanced-classes-bundle/v/unstable)](https://packagist.org/packages/contao-dd/advanced-classes-bundle) [![License](https://poser.pugx.org/contao-dd/advanced-classes-bundle/license)](https://packagist.org/packages/contao-dd/advanced-classes-bundle)
 
+Das Modul erweitert die CSS-Klassen der Contao Elemente durch selbst definierbare Sets an CSS-Klassen. Redakteure und Admins können über Select-Felder schnell auf vordefinierte CSS-Klassen zugreifen.
+
+Über unseren Konfigurator (noch in der Entwicklung) lassen sich die Sets auf einfache Weise an eure Anforderungen anpassen.
+
+Für Bootstrap wird bereits ein vordefiniertes Set für Spaltenbreite, Spalten-Offset, Reihenfolge (Pull/Push) und Sichtbarkeit mitgeliefert.
+
+
 About
 -----
 
