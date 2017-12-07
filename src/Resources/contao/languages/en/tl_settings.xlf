@@ -13,6 +13,14 @@
         <source>Here you can select the available sets.</source>
         <target>Hier können Sie ein verfügbares Set auswählen.</target>
       </trans-unit>
+      <trans-unit id="tl_settings.ac_defaultColumnWidth.0">
+        <source>Activate Default Column Width</source>
+        <target>Standardwert für Spaltenbreite</target>
+      </trans-unit>
+      <trans-unit id="tl_settings.ac_disableCSS.0">
+        <source>Disable Module CSS</source>
+        <target>Deaktiviere moduleigenes CSS</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>
