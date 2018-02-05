@@ -189,7 +189,62 @@
                      "value":"l12"
                   }
                }
-            }
+            },
+           "4":{
+             "id":"columnSetSizeSelect4",
+             "class":"icon-laptop ac-w25",
+             "type":"select",
+             "values":{
+               "1":{
+                 "title":".xl1",
+                 "value":"xl1"
+               },
+               "2":{
+                 "title":".xl2",
+                 "value":"xl2"
+               },
+               "3":{
+                 "title":".xl3",
+                 "value":"xl3"
+               },
+               "4":{
+                 "title":".xl4",
+                 "value":"xl4"
+               },
+               "5":{
+                 "title":".xl5",
+                 "value":"xl5"
+               },
+               "6":{
+                 "title":".xl6",
+                 "value":"xl6"
+               },
+               "7":{
+                 "title":".xl7",
+                 "value":"xl7"
+               },
+               "8":{
+                 "title":".xl8",
+                 "value":"xl8"
+               },
+               "9":{
+                 "title":".xl9",
+                 "value":"xl9"
+               },
+               "10":{
+                 "title":".xl10",
+                 "value":"xl10"
+               },
+               "11":{
+                 "title":".xl11",
+                 "value":"xl11"
+               },
+               "12":{
+                 "title":".xl12",
+                 "value":"xl12"
+               }
+             }
+           }
          }
       },
       "3":{
@@ -361,7 +416,62 @@
                      "value":"offset-l12"
                   }
                }
-            }
+            },
+           "4":{
+             "id":"columnSetOffsetSelect4",
+             "class":"icon-laptop ac-w25",
+             "type":"select",
+             "values":{
+               "1":{
+                 "title":".offset-xl1",
+                 "value":"offset-xl1"
+               },
+               "2":{
+                 "title":".offset-xl2",
+                 "value":"offset-xl2"
+               },
+               "3":{
+                 "title":".offset-xl3",
+                 "value":"offset-xl3"
+               },
+               "4":{
+                 "title":".offset-xl4",
+                 "value":"offset-xl4"
+               },
+               "5":{
+                 "title":".offset-xl5",
+                 "value":"offset-xl5"
+               },
+               "6":{
+                 "title":".offset-xl6",
+                 "value":"offset-xl6"
+               },
+               "7":{
+                 "title":".offset-xl7",
+                 "value":"offset-xl7"
+               },
+               "8":{
+                 "title":".offset-xl8",
+                 "value":"offset-xl8"
+               },
+               "9":{
+                 "title":".offset-xl9",
+                 "value":"offset-xl9"
+               },
+               "10":{
+                 "title":".offset-xl10",
+                 "value":"offset-xl10"
+               },
+               "11":{
+                 "title":".offset-xl11",
+                 "value":"offset-xl11"
+               },
+               "12":{
+                 "title":".offset-xl12",
+                 "value":"offset-xl12"
+               }
+             }
+           }
          }
       },
       "4":{
@@ -677,7 +787,110 @@
                      "value":"pull-l12"
                   }
                }
-            }
+            },
+           "4":{
+             "id":"columnSetPushPullSelect4",
+             "class":"icon-laptop ac-w25",
+             "type":"select",
+             "values":{
+               "1":{
+                 "title":".push-xl1",
+                 "value":"push-xl1"
+               },
+               "2":{
+                 "title":".push-xl2",
+                 "value":"push-xl2"
+               },
+               "3":{
+                 "title":".push-xl3",
+                 "value":"push-xl3"
+               },
+               "4":{
+                 "title":".push-xl4",
+                 "value":"push-xl4"
+               },
+               "5":{
+                 "title":".push-xl5",
+                 "value":"push-xl5"
+               },
+               "6":{
+                 "title":".push-xl6",
+                 "value":"push-xl6"
+               },
+               "7":{
+                 "title":".push-xl7",
+                 "value":"push-xl7"
+               },
+               "8":{
+                 "title":".push-xl8",
+                 "value":"push-xl8"
+               },
+               "9":{
+                 "title":".push-xl9",
+                 "value":"push-xl9"
+               },
+               "10":{
+                 "title":".push-xl10",
+                 "value":"push-xl10"
+               },
+               "11":{
+                 "title":".push-xl11",
+                 "value":"push-xl11"
+               },
+               "12":{
+                 "title":".push-xl12",
+                 "value":"push-xl12"
+               },
+               "13":{
+                 "title":".pull-xl1",
+                 "value":"pull-xl1"
+               },
+               "14":{
+                 "title":".pull-xl2",
+                 "value":"pull-xl2"
+               },
+               "15":{
+                 "title":".pull-xl3",
+                 "value":"pull-xl3"
+               },
+               "16":{
+                 "title":".pull-xl4",
+                 "value":"pull-xl4"
+               },
+               "17":{
+                 "title":".pull-xl5",
+                 "value":"pull-xl5"
+               },
+               "18":{
+                 "title":".pull-xl6",
+                 "value":"pull-xl6"
+               },
+               "19":{
+                 "title":".pull-xl7",
+                 "value":"pull-xl7"
+               },
+               "20":{
+                 "title":".pull-xl8",
+                 "value":"pull-xl8"
+               },
+               "21":{
+                 "title":".pull-xl9",
+                 "value":"pull-xl9"
+               },
+               "22":{
+                 "title":".pull-xl10",
+                 "value":"pull-xl10"
+               },
+               "23":{
+                 "title":".pull-xl11",
+                 "value":"pull-xl11"
+               },
+               "24":{
+                 "title":".pull-xl12",
+                 "value":"pull-xl12"
+               }
+             }
+           }
          }
       },
       "5":{
