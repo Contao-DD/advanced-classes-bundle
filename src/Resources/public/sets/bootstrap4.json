@@ -1011,6 +1011,454 @@
       }
     },
     "5": {
+      "secId": "columnSetMargin",
+      "secHeadline": "Außenabstand (Margin) setzen",
+      "secClass": "icon-move",
+      "cssSet": {
+        "1": {
+          "id": "columnSetMargin1",
+          "class": "icon-up-big ac-w20",
+          "type": "select",
+          "values": {
+            "1": {
+              "title": "top: 0",
+              "value": "mt-0"
+            },
+            "2": {
+              "title": "top: 0.25rem",
+              "value": "mt-1"
+            },
+            "3": {
+              "title": "top: 0.5rem",
+              "value": "mt-2"
+            },
+            "4": {
+              "title": "top: 1rem",
+              "value": "mt-3"
+            },
+            "5": {
+              "title": "top: 1.5rem",
+              "value": "mt-4"
+            },
+            "6": {
+              "title": "top: 3rem",
+              "value": "mt-5"
+            }
+          }
+        },
+        "2": {
+          "id": "columnSetMargin2",
+          "class": "icon-right-big ac-w20",
+          "type": "select",
+          "values": {
+            "1": {
+              "title": "right: 0",
+              "value": "mr-0"
+            },
+            "2": {
+              "title": "right: 0.25rem",
+              "value": "mr-1"
+            },
+            "3": {
+              "title": "right: 0.5rem",
+              "value": "mr-2"
+            },
+            "4": {
+              "title": "right: 1rem",
+              "value": "mr-3"
+            },
+            "5": {
+              "title": "right: 1.5rem",
+              "value": "mr-4"
+            },
+            "6": {
+              "title": "right: 3rem",
+              "value": "mr-5"
+            }
+          }
+        },
+        "3": {
+          "id": "columnSetMargin3",
+          "class": "icon-down-big ac-w20",
+          "type": "select",
+          "values": {
+            "1": {
+              "title": "bottom: 0",
+              "value": "mb-0"
+            },
+            "2": {
+              "title": "bottom: 0.25rem",
+              "value": "mb-1"
+            },
+            "3": {
+              "title": "bottom: 0.5rem",
+              "value": "mb-2"
+            },
+            "4": {
+              "title": "bottom: 1rem",
+              "value": "mb-3"
+            },
+            "5": {
+              "title": "bottom: 1.5rem",
+              "value": "mb-4"
+            },
+            "6": {
+              "title": "bottom: 3rem",
+              "value": "mb-5"
+            }
+          }
+        },
+        "4": {
+          "id": "columnSetMargin4",
+          "class": "icon-left-big ac-w20",
+          "type": "select",
+          "values": {
+            "1": {
+              "title": "left: 0",
+              "value": "ml-0"
+            },
+            "2": {
+              "title": "left: 0.25rem",
+              "value": "ml-1"
+            },
+            "3": {
+              "title": "left: 0.5rem",
+              "value": "ml-2"
+            },
+            "4": {
+              "title": "left: 1rem",
+              "value": "ml-3"
+            },
+            "5": {
+              "title": "left: 1.5rem",
+              "value": "ml-4"
+            },
+            "6": {
+              "title": "left: 3rem",
+              "value": "ml-5"
+            }
+          }
+        },
+        "5": {
+          "id": "columnSetMargin5",
+          "class": "icon-resize-horizontal ac-w20",
+          "type": "select",
+          "values": {
+            "1": {
+              "title": "left/right: 0",
+              "value": "mx-0"
+            },
+            "2": {
+              "title": "left/right: 0.25rem",
+              "value": "mx-1"
+            },
+            "3": {
+              "title": "left/right: 0.5rem",
+              "value": "mx-2"
+            },
+            "4": {
+              "title": "left/right: 1rem",
+              "value": "mx-3"
+            },
+            "5": {
+              "title": "left/right: 1.5rem",
+              "value": "mx-4"
+            },
+            "6": {
+              "title": "left/right: 3rem",
+              "value": "mx-5"
+            }
+          }
+        },
+        "6": {
+          "id": "columnSetMargin6",
+          "class": "icon-resize-vertical ac-w20",
+          "type": "select",
+          "values": {
+            "1": {
+              "title": "top/bottom: 0",
+              "value": "my-0"
+            },
+            "2": {
+              "title": "top/bottom: 0.25rem",
+              "value": "my-1"
+            },
+            "3": {
+              "title": "top/bottom: 0.5rem",
+              "value": "my-2"
+            },
+            "4": {
+              "title": "top/bottom: 1rem",
+              "value": "my-3"
+            },
+            "5": {
+              "title": "top/bottom: 1.5rem",
+              "value": "my-4"
+            },
+            "6": {
+              "title": "top/bottom: 3rem",
+              "value": "my-5"
+            }
+          }
+        },
+        "7": {
+          "id": "columnSetMargin7",
+          "class": "icon-move ac-w20",
+          "type": "select",
+          "values": {
+            "1": {
+              "title": "all: 0",
+              "value": "m-0"
+            },
+            "2": {
+              "title": "all: 0.25rem",
+              "value": "m-1"
+            },
+            "3": {
+              "title": "all: 0.5rem",
+              "value": "m-2"
+            },
+            "4": {
+              "title": "all: 1rem",
+              "value": "m-3"
+            },
+            "5": {
+              "title": "all: 1.5rem",
+              "value": "m-4"
+            },
+            "6": {
+              "title": "all: 3rem",
+              "value": "m-5"
+            }
+          }
+        }
+      }
+    },
+    "6": {
+      "secId": "columnSetPadding",
+      "secHeadline": "Innenabstand (Padding) setzen",
+      "secClass": "icon-move",
+      "cssSet": {
+        "1": {
+          "id": "columnSetPadding1",
+          "class": "icon-up-big ac-w20",
+          "type": "select",
+          "values": {
+            "1": {
+              "title": "top: 0",
+              "value": "pt-0"
+            },
+            "2": {
+              "title": "top: 0.25rem",
+              "value": "pt-1"
+            },
+            "3": {
+              "title": "top: 0.5rem",
+              "value": "pt-2"
+            },
+            "4": {
+              "title": "top: 1rem",
+              "value": "pt-3"
+            },
+            "5": {
+              "title": "top: 1.5rem",
+              "value": "pt-4"
+            },
+            "6": {
+              "title": "top: 3rem",
+              "value": "pt-5"
+            }
+          }
+        },
+        "2": {
+          "id": "columnSetPadding2",
+          "class": "icon-right-big ac-w20",
+          "type": "select",
+          "values": {
+            "1": {
+              "title": "right: 0",
+              "value": "pr-0"
+            },
+            "2": {
+              "title": "right: 0.25rem",
+              "value": "pr-1"
+            },
+            "3": {
+              "title": "right: 0.5rem",
+              "value": "pr-2"
+            },
+            "4": {
+              "title": "right: 1rem",
+              "value": "pr-3"
+            },
+            "5": {
+              "title": "right: 1.5rem",
+              "value": "pr-4"
+            },
+            "6": {
+              "title": "right: 3rem",
+              "value": "pr-5"
+            }
+          }
+        },
+        "3": {
+          "id": "columnSetPadding3",
+          "class": "icon-down-big ac-w20",
+          "type": "select",
+          "values": {
+            "1": {
+              "title": "bottom: 0",
+              "value": "pb-0"
+            },
+            "2": {
+              "title": "bottom: 0.25rem",
+              "value": "pb-1"
+            },
+            "3": {
+              "title": "bottom: 0.5rem",
+              "value": "pb-2"
+            },
+            "4": {
+              "title": "bottom: 1rem",
+              "value": "pb-3"
+            },
+            "5": {
+              "title": "bottom: 1.5rem",
+              "value": "pb-4"
+            },
+            "6": {
+              "title": "bottom: 3rem",
+              "value": "pb-5"
+            }
+          }
+        },
+        "4": {
+          "id": "columnSetPadding4",
+          "class": "icon-left-big ac-w20",
+          "type": "select",
+          "values": {
+            "1": {
+              "title": "left: 0",
+              "value": "pl-0"
+            },
+            "2": {
+              "title": "left: 0.25rem",
+              "value": "pl-1"
+            },
+            "3": {
+              "title": "left: 0.5rem",
+              "value": "pl-2"
+            },
+            "4": {
+              "title": "left: 1rem",
+              "value": "pl-3"
+            },
+            "5": {
+              "title": "left: 1.5rem",
+              "value": "pl-4"
+            },
+            "6": {
+              "title": "left: 3rem",
+              "value": "pl-5"
+            }
+          }
+        },
+        "5": {
+          "id": "columnSetPadding5",
+          "class": "icon-resize-horizontal ac-w20",
+          "type": "select",
+          "values": {
+            "1": {
+              "title": "left/right: 0",
+              "value": "px-0"
+            },
+            "2": {
+              "title": "left/right: 0.25rem",
+              "value": "px-1"
+            },
+            "3": {
+              "title": "left/right: 0.5rem",
+              "value": "px-2"
+            },
+            "4": {
+              "title": "left/right: 1rem",
+              "value": "px-3"
+            },
+            "5": {
+              "title": "left/right: 1.5rem",
+              "value": "px-4"
+            },
+            "6": {
+              "title": "left/right: 3rem",
+              "value": "px-5"
+            }
+          }
+        },
+        "6": {
+          "id": "columnSetPadding6",
+          "class": "icon-resize-vertical ac-w20",
+          "type": "select",
+          "values": {
+            "1": {
+              "title": "top/bottom: 0",
+              "value": "py-0"
+            },
+            "2": {
+              "title": "top/bottom: 0.25rem",
+              "value": "py-1"
+            },
+            "3": {
+              "title": "top/bottom: 0.5rem",
+              "value": "py-2"
+            },
+            "4": {
+              "title": "top/bottom: 1rem",
+              "value": "py-3"
+            },
+            "5": {
+              "title": "top/bottom: 1.5rem",
+              "value": "py-4"
+            },
+            "6": {
+              "title": "top/bottom: 3rem",
+              "value": "py-5"
+            }
+          }
+        },
+        "7": {
+          "id": "columnSetPadding7",
+          "class": "icon-move ac-w20",
+          "type": "select",
+          "values": {
+            "1": {
+              "title": "all: 0",
+              "value": "p-0"
+            },
+            "2": {
+              "title": "all: 0.25rem",
+              "value": "p-1"
+            },
+            "3": {
+              "title": "all: 0.5rem",
+              "value": "p-2"
+            },
+            "4": {
+              "title": "all: 1rem",
+              "value": "p-3"
+            },
+            "5": {
+              "title": "all: 1.5rem",
+              "value": "p-4"
+            },
+            "6": {
+              "title": "all: 3rem",
+              "value": "p-5"
+            }
+          }
+        }
+      }
+    },
+    "8": {
       "secId": "columnSetPrint",
       "secHeadline": "Inhalte für Print",
       "secClass": "icon-print",

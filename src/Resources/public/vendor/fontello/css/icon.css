@@ -58,3 +58,10 @@
 .icon-indent-right:before { content: '\e805'; } /* '' */
 .icon-exchange:before { content: '\e806'; } /* '' */
 .icon-eye:before { content: '\e807'; } /* '' */
+.icon-down-big:before { content: '\e808'; } /* '' */
+.icon-left-big:before { content: '\e809'; } /* '' */
+.icon-right-big:before { content: '\e810'; } /* '' */
+.icon-up-big:before { content: '\e811'; } /* '' */
+.icon-move:before { content: '\e812'; } /* '' */
+.icon-resize-vertical:before { content: '\e813'; } /* '' */
+.icon-resize-horizontal:before { content: '\e814'; } /* '' */
