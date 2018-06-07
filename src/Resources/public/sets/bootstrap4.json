@@ -1458,6 +1458,108 @@
         }
       }
     },
+    "7": {
+      "secId": "columnSetAlignment",
+      "secHeadline": "Ausrichtung",
+      "secClass": "",
+      "cssSet": {
+        "1": {
+          "id": "columnSetAlignment1",
+          "class": "icon-mobile ac-w20",
+          "type": "select",
+          "values": {
+            "1": {
+              "title": ".text-sm-left",
+              "value": "text-sm-left"
+            },
+            "2": {
+              "title": ".text-sm-center",
+              "value": "text-sm-center"
+            },
+            "3": {
+              "title": ".text-sm-right",
+              "value": "text-sm-right"
+            }
+          }
+        },
+        "2": {
+          "id": "columnSetAlignment2",
+          "class": "icon-mobile landscape ac-w20",
+          "type": "select",
+          "values": {
+            "1": {
+              "title": ".text-md-left",
+              "value": "text-md-left"
+            },
+            "2": {
+              "title": ".text-md-center",
+              "value": "text-md-center"
+            },
+            "3": {
+              "title": ".text-md-right",
+              "value": "text-md-right"
+            }
+          }
+        },
+        "3": {
+          "id": "columnSetAlignment3",
+          "class": "icon-tablet ac-w20",
+          "type": "select",
+          "values": {
+            "1": {
+              "title": ".text-lg-left",
+              "value": "text-lg-left"
+            },
+            "2": {
+              "title": ".text-lg-center",
+              "value": "text-lg-center"
+            },
+            "3": {
+              "title": ".text-lg-right",
+              "value": "text-lg-right"
+            }
+          }
+        },
+        "4": {
+          "id": "columnSetAlignment4",
+          "class": "icon-laptop ac-w20",
+          "type": "select",
+          "values": {
+            "1": {
+              "title": ".text-xl-left",
+              "value": "text-xl-left"
+            },
+            "2": {
+              "title": ".text-xl-center",
+              "value": "text-xl-center"
+            },
+            "3": {
+              "title": ".text-xl-right",
+              "value": "text-xl-right"
+            }
+          }
+        },
+        "5": {
+          "id": "columnSetAlignment5",
+          "class": "icon-desktop ac-w20",
+          "type": "select",
+          "values": {
+            "1": {
+              "title": ".text-left",
+              "value": "text-left"
+            },
+            "2": {
+              "title": ".text-center",
+              "value": "text-center"
+            },
+            "3": {
+              "title": ".text-right",
+              "value": "text-right"
+            }
+          }
+        }
+      }
+    },
     "8": {
       "secId": "columnSetPrint",
       "secHeadline": "Inhalte für Print",
