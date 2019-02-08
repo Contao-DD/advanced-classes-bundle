@@ -12,8 +12,13 @@
 $dc = &$GLOBALS['TL_DCA']['tl_content'];
 
 foreach ($dc['palettes'] as $key=>$value) {
-    if(!is_array ($value) && strpos($value,"cssID;")!==false) {
-        $dc['palettes'][$key] = str_replace('cssID;', 'cssID;{advanced_classes_legend},advancedCss;', $value);
+    if(!is_array ($value)) {
+        if(strpos($value,"cssID;")!==false) {
+            $dc['palettes'][$key] = str_replace('cssID;', 'cssID;{advanced_classes_legend},advancedCss;', $value);
+        } else if(strpos($value,"useHomeDir;")!==false) {
+            $dc['palettes'][$key] = str_replace('useHomeDir;', 'useHomeDir;{advanced_classes_legend},advancedCss;', $value);
+        }
+
     }
 }
 
