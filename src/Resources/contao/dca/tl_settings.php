@@ -11,7 +11,11 @@
 
 $dc = &$GLOBALS['TL_DCA']['tl_settings'];
 
-$dc['palettes']['default'] = str_replace('staticPlugins;', 'staticPlugins;{ac_legend},advancedClassesSet,ac_defaultColumnWidth,ac_disableCSS;', $dc['palettes']['default']);
+if(version_compare(VERSION, '4.7','>=')) {
+    $dc['palettes']['default'] = str_replace('maxResultsPerPage;', 'maxResultsPerPage;{ac_legend},advancedClassesSet,ac_defaultColumnWidth,ac_disableCSS;', $dc['palettes']['default']);
+} else {
+    $dc['palettes']['default'] = str_replace('staticPlugins;', 'staticPlugins;{ac_legend},advancedClassesSet,ac_defaultColumnWidth,ac_disableCSS;', $dc['palettes']['default']);
+}
 
 $arrFields = array
 (
