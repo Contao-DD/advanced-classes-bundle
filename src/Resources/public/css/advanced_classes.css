@@ -15,6 +15,11 @@
     color: #8A2BE2;
 }
 
+#advancedFormContainer .ac-col6 {
+    width: 15.65%;
+    float: left;
+}
+
 #advancedFormContainer .ac-w20 {
     width: 19%;
     float: left;
@@ -72,6 +77,12 @@
 
 #advancedFormContainer .tl_select {
     max-width: 100%;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+#advancedFormContainer .value.select.no-icon select {
+    width: 100%;
 }
 
 @media (max-width: 767px) {
