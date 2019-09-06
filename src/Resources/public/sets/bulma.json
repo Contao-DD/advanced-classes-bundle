@@ -699,54 +699,295 @@
       }
     },
     "4":{
-      "secId":"columnSetGapless",
-      "secHeadline":"Ohne Abstände zwischen den Spalten",
-      "secClass":"",
+      "secId":"columnSetColumnClasses",
+      "secHeadline":"Weitere Klassen für Spalten",
+      "secClass":"col6",
       "cssSet":{
         "1":{
-          "id":"columnSetGaplessSelect1",
+          "id":"columnSetColumnClassesSelect1",
           "class":"no-icon ac-col6",
           "type":"select",
+          "label": "Ohne Abstand",
           "values":{
             "1":{
               "title":".is-gapless",
               "value":"is-gapless"
             }
           }
-        }
-      }
-    },
-    "5":{
-      "secId":"columnSetCentered",
-      "secHeadline":"Zentrierte Ausrichtung der Spalten",
-      "secClass":"",
-      "cssSet":{
-        "1":{
-          "id":"columnSetCenteredSelect1",
+        },
+        "2":{
+          "id":"columnSetColumnClassesSelect2",
           "class":"no-icon ac-col6",
           "type":"select",
+          "label": "Zentrierte Ausrichtung",
           "values":{
             "1":{
               "title":".is-centered",
               "value":"is-centered"
             }
           }
-        }
-      }
-    },
-    "6":{
-      "secId":"columnSetMultiline",
-      "secHeadline":"Flexible Ausrichtung der Spalten",
-      "secClass":"",
-      "cssSet":{
-        "1":{
-          "id":"columnSetMultilineSelect1",
+        },
+        "3":{
+          "id":"columnSetColumnClassesSelect3",
           "class":"no-icon ac-col6",
           "type":"select",
+          "label": "Flexible Ausrichtung",
           "values":{
             "1":{
               "title":".is-multiline",
               "value":"is-multiline"
+            }
+          }
+        }
+      }
+    },
+    "5":{
+      "secId":"columnSetClasses",
+      "secHeadline":"Klassen für Inhaltselemente",
+      "secClass":"",
+      "cssSet":{
+        "1":{
+          "id":"columnSetClass",
+          "class":"no-icon ac-col6",
+          "type":"select",
+          "label":"Button",
+          "values":{
+            "1":{
+              "title":".button",
+              "value":"button"
+            }
+          }
+        },
+        "2":{
+          "id":"columnSetColor",
+          "class":"no-icon ac-col6",
+          "type":"select",
+          "label": "Farbe",
+          "values":{
+            "1":{
+              "title":".is-primary",
+              "value":"is-primary",
+              "selected":"selected"
+            },
+            "2":{
+              "title":".is-link",
+              "value":"is-link"
+            },
+            "3":{
+              "title":".is-info",
+              "value":"is-info"
+            },
+            "4":{
+              "title":".is-success",
+              "value":"is-success"
+            },
+            "5":{
+              "title":".is-warning",
+              "value":"is-warning"
+            },
+            "6":{
+              "title":".is-danger",
+              "value":"is-danger"
+            }
+          }
+        },
+        "3":{
+          "id":"columnSetSize",
+          "class":"no-icon ac-col6",
+          "type":"select",
+          "label": "Größe",
+          "values":{
+            "1":{
+              "title":".is-small",
+              "value":"is-small"
+            },
+            "2":{
+              "title":".is-medium",
+              "value":"is-medium"
+            },
+            "3":{
+              "title":".is-large",
+              "value":"is-large"
+            }
+          }
+        },
+        "4":{
+          "id":"columnSetStyle",
+          "class":"no-icon ac-col6",
+          "type":"select",
+          "label": "Style",
+          "values":{
+            "1":{
+              "title":".is-outlined",
+              "value":"is-outlined"
+            },
+            "2":{
+              "title":".is-loading",
+              "value":"is-loading"
+            }
+          }
+        },
+        "5":{
+          "id":"columnSetFloat",
+          "class":"no-icon ac-col6",
+          "type":"select",
+          "label": "Float",
+          "values":{
+            "1":{
+              "title":".is-clearfix",
+              "value":"is-clearfix"
+            },
+            "2":{
+              "title":".is-pulled-left",
+              "value":"is-pulled-left"
+            },
+            "3":{
+              "title":".is-pulled-right",
+              "value":"is-pulled-right"
+            }
+          }
+        },
+        "6":{
+          "id":"columnSetSpacing",
+          "class":"no-icon ac-col6",
+          "type":"select",
+          "label": "Abstand entfernen",
+          "values":{
+            "1":{
+              "title":".is-marginless",
+              "value":"is-marginless"
+            },
+            "2":{
+              "title":".is-paddingless",
+              "value":"is-paddingless"
+            }
+          }
+        },
+        "7":{
+          "id":"columnSetOverlay",
+          "class":"no-icon ac-col6",
+          "type":"select",
+          "label": "Overlay",
+          "values":{
+            "1":{
+              "title":".is-overlay",
+              "value":"is-overlay"
+            }
+          }
+        },
+        "8":{
+          "id":"columnSetClipped",
+          "class":"no-icon ac-col6",
+          "type":"select",
+          "label": "Overflow hidden",
+          "values":{
+            "1":{
+              "title":".is-clipped",
+              "value":"is-clipped"
+            }
+          }
+        },
+        "9":{
+          "id":"columnSetRadiusless",
+          "class":"no-icon ac-col6",
+          "type":"select",
+          "label": "Radius entfernen",
+          "values":{
+            "1":{
+              "title":".is-radiusless",
+              "value":"is-radiusless"
+            }
+          }
+        },
+        "10":{
+          "id":"columnSetShadowless",
+          "class":"no-icon ac-col6",
+          "type":"select",
+          "label": "Schatten entfernen",
+          "values":{
+            "1":{
+              "title":".is-shadowless",
+              "value":"is-shadowless"
+            }
+          }
+        },
+        "11":{
+          "id":"columnSetUnselectable",
+          "class":"no-icon ac-col6",
+          "type":"select",
+          "label": "Text nicht auswählbar",
+          "values":{
+            "1":{
+              "title":".is-unselectable",
+              "value":"is-unselectable"
+            }
+          }
+        },
+        "12":{
+          "id":"columnSetInvisible",
+          "class":"no-icon ac-col6",
+          "type":"select",
+          "label": "Visibility hidden",
+          "values":{
+            "1":{
+              "title":".is-invisible",
+              "value":"is-invisible"
+            }
+          }
+        },
+        "13":{
+          "id":"columnSetDisplay",
+          "class":"no-icon ac-col6",
+          "type":"select",
+          "label": "Display",
+          "values":{
+            "1":{
+              "title":".is-hidden",
+              "value":"is-hidden"
+            },
+            "2":{
+              "title":".is-block",
+              "value":"is-block"
+            },
+            "3":{
+              "title":".is-flex",
+              "value":"is-flex"
+            },
+            "4":{
+              "title":".is-inline",
+              "value":"is-inline"
+            },
+            "5":{
+              "title":".is-inline-block",
+              "value":"is-inline-block"
+            },
+            "6":{
+              "title":".is-inline-flex",
+              "value":"is-inline-flex"
+            }
+          }
+        },
+        "14":{
+          "id":"columnSetSrOnly",
+          "class":"no-icon ac-col6",
+          "type":"select",
+          "label": "Element verstecken (außer Screen Reader)",
+          "values":{
+            "1":{
+              "title":".is-sr-only",
+              "value":"is-sr-only"
+            }
+          }
+        },
+        "15":{
+          "id":"columnSetRelative",
+          "class":"no-icon ac-col6",
+          "type":"select",
+          "label": "Position",
+          "values":{
+            "1":{
+              "title":".is-relative",
+              "value":"is-relative"
             }
           }
         }
