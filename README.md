@@ -7,7 +7,7 @@ Das Modul erweitert die CSS-Klassen der Contao Elemente durch selbst definierbar
 
 Über unseren Konfigurator (noch in der Entwicklung) lassen sich die Sets auf einfache Weise an eure Anforderungen anpassen.
 
-Für Bootstrap und Materialize wird bereits ein vordefiniertes Set für Spaltenbreite, Spalten-Offset, Reihenfolge (Pull/Push) und Sichtbarkeit mitgeliefert.
+Für Bootstrap, Materialize und Bulma wird bereits ein vordefiniertes Set für Spaltenbreite, Spalten-Offset, Reihenfolge (Pull/Push) und Sichtbarkeit mitgeliefert.
 
 
 About
@@ -16,7 +16,7 @@ About
 Extend the css classes of Contao elements.
 
 **Supported Entities**
-headline, text, list, table, accordion, slider, code, markdown, hyperlink, toplink, image, gallery, player, youtube, download, downloads, teaser, form, module 
+headline, text, list, table, accordion, slider, code, markdown, hyperlink, toplink, image, gallery, player, youtube, download, downloads, teaser, module 
 
 
 Screenshot
@@ -49,23 +49,3 @@ https://contao.org/de/extension-list/view/contao-advanced-classes.html
 License
 ---------------
 LGPL-3.0+
-
-
-History
----------------
-v0.5.0
-* add materialize set
-
-v0.4.1
-* bugfix - representation after copying a content item
-
-v0.4.0
-* new feature: default value for column widths
-* new feature: disable module CSS
-* add bootstrap sets
-
-before
-* [done] add basic elements
-* [done] add select option for sets in default settings 
-* [done] add great form to simple add bootstrap classes (reusable for other frameworks!!!) :) 
-* [done] add active/inactive option for module to local config section
