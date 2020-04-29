@@ -514,6 +514,244 @@
       }
     },
     "5":{
+      "secId":"columnSetMargin",
+      "secHeadline":"Margin (Außenabstand)",
+      "secClass":"",
+      "cssSet":{
+        "1":{
+          "id":"setMargin",
+          "class":"no-icon ac-w25",
+          "type":"select",
+          "label": "Margin",
+          "values":{
+            "1":{
+              "title":".m-1",
+              "value":"m-1"
+            },
+            "2":{
+              "title":".m-2",
+              "value":"m-2"
+            }
+          }
+        },
+        "2":{
+          "id":"setMarginTop",
+          "class":"no-icon ac-w25",
+          "type":"select",
+          "label": "Margin (oben)",
+          "values":{
+            "1":{
+              "title":".mt-1",
+              "value":"mt-1"
+            },
+            "2":{
+              "title":".mt-2",
+              "value":"mt-2"
+            }
+          }
+        },
+        "3":{
+          "id":"setMarginBottom",
+          "class":"no-icon ac-w25",
+          "type":"select",
+          "label": "Margin (unten)",
+          "values":{
+            "1":{
+              "title":".mb-1",
+              "value":"mb-1"
+            },
+            "2":{
+              "title":".mb-2",
+              "value":"mb-2"
+            }
+          }
+        },
+        "4":{
+          "id":"setMarginLeft",
+          "class":"no-icon ac-w25",
+          "type":"select",
+          "label": "Margin (links)",
+          "values":{
+            "1":{
+              "title":".ml-1",
+              "value":"ml-1"
+            },
+            "2":{
+              "title":".ml-2",
+              "value":"ml-2"
+            }
+          }
+        },
+        "5":{
+          "id":"setMarginRight",
+          "class":"no-icon ac-w25",
+          "type":"select",
+          "label": "Margin (rechts)",
+          "values":{
+            "1":{
+              "title":".mr-1",
+              "value":"mr-1"
+            },
+            "2":{
+              "title":".mr-2",
+              "value":"mr-2"
+            }
+          }
+        },
+        "6":{
+          "id":"setMarginTopBottom",
+          "class":"no-icon ac-w25",
+          "type":"select",
+          "label": "Margin (oben/unten)",
+          "values":{
+            "1":{
+              "title":".my-1",
+              "value":"my-1"
+            },
+            "2":{
+              "title":".my-2",
+              "value":"my-2"
+            }
+          }
+        },
+        "7":{
+          "id":"setMarginLeftRight",
+          "class":"no-icon ac-w25",
+          "type":"select",
+          "label": "Margin (links/rechts)",
+          "values":{
+            "1":{
+              "title":".mx-1",
+              "value":"mx-1"
+            },
+            "2":{
+              "title":".mx-2",
+              "value":"mx-2"
+            }
+          }
+        }
+      }
+    },
+    "6":{
+      "secId":"columnSetPadding",
+      "secHeadline":"Padding (Innenabstand)",
+      "secClass":"",
+      "cssSet":{
+        "1":{
+          "id":"setPadding",
+          "class":"no-icon ac-w25",
+          "type":"select",
+          "label": "Padding",
+          "values":{
+            "1":{
+              "title":".p-1",
+              "value":"p-1"
+            },
+            "2":{
+              "title":".p-2",
+              "value":"p-2"
+            }
+          }
+        },
+        "2":{
+          "id":"setPaddingTop",
+          "class":"no-icon ac-w25",
+          "type":"select",
+          "label": "Padding (oben)",
+          "values":{
+            "1":{
+              "title":".pt-1",
+              "value":"pt-1"
+            },
+            "2":{
+              "title":".pt-2",
+              "value":"pt-2"
+            }
+          }
+        },
+        "3":{
+          "id":"setPaddingBottom",
+          "class":"no-icon ac-w25",
+          "type":"select",
+          "label": "Padding (unten)",
+          "values":{
+            "1":{
+              "title":".pb-1",
+              "value":"pb-1"
+            },
+            "2":{
+              "title":".pb-2",
+              "value":"pb-2"
+            }
+          }
+        },
+        "4":{
+          "id":"setPaddingLeft",
+          "class":"no-icon ac-w25",
+          "type":"select",
+          "label": "Padding (links)",
+          "values":{
+            "1":{
+              "title":".pl-1",
+              "value":"pl-1"
+            },
+            "2":{
+              "title":".pl-2",
+              "value":"pl-2"
+            }
+          }
+        },
+        "5":{
+          "id":"setPaddingRight",
+          "class":"no-icon ac-w25",
+          "type":"select",
+          "label": "Padding (rechts)",
+          "values":{
+            "1":{
+              "title":".pr-1",
+              "value":"pr-1"
+            },
+            "2":{
+              "title":".pr-2",
+              "value":"pr-2"
+            }
+          }
+        },
+        "6":{
+          "id":"setPaddingTopBottom",
+          "class":"no-icon ac-w25",
+          "type":"select",
+          "label": "Padding (oben/unten)",
+          "values":{
+            "1":{
+              "title":".py-1",
+              "value":"py-1"
+            },
+            "2":{
+              "title":".py-2",
+              "value":"py-2"
+            }
+          }
+        },
+        "7":{
+          "id":"setPaddingLeftRight",
+          "class":"no-icon ac-w25",
+          "type":"select",
+          "label": "Padding (links/rechts)",
+          "values":{
+            "1":{
+              "title":".px-1",
+              "value":"px-1"
+            },
+            "2":{
+              "title":".px-2",
+              "value":"px-2"
+            }
+          }
+        }
+      }
+    },
+    "7":{
       "secId":"columnSetClasses",
       "secHeadline":"Klassen für Inhaltselemente",
       "secClass":"col6",
@@ -635,6 +873,22 @@
             "1":{
               "title":".text-large",
               "value":"text-large"
+            }
+          }
+        },
+        "8":{
+          "id":"setTextWeight",
+          "class":"no-icon ac-col6",
+          "type":"select",
+          "label": "Textdicke",
+          "values":{
+            "1":{
+              "title":".text-normal",
+              "value":"text-normal"
+            },
+            "2":{
+              "title":".text-bold",
+              "value":"text-bold"
             }
           }
         }
