@@ -32,6 +32,8 @@ if(TL_MODE == 'BE')
  * Hooks
  */
 
+// $GLOBALS['TL_HOOKS']['getContentElement'][] = array('\ContaoDD\AdvancedClassesHooks', 'extendContentElementCssClasses');
+// $GLOBALS['TL_HOOKS']['compileFormFields'][] = array('\ContaoDD\AdvancedClassesHooks', 'extendFormCssClasses');
 $GLOBALS['TL_HOOKS']['parseTemplate'][] = array('\ContaoDD\AdvancedClassesHooks', 'extendCssClasses');
 $GLOBALS['TL_HOOKS']['outputBackendTemplate'][] = array('\ContaoDD\AdvancedClassesHooks', 'extendBackendTemplate');
 

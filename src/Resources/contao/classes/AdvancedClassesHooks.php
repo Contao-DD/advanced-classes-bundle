@@ -19,9 +19,28 @@ class AdvancedClassesHooks extends \Controller
     public function extendCssClasses($objTemplate)
     {
         $arrData = $objTemplate->getData();
-        if (isset($arrData['advancedCss'])) {
-            $objTemplate->class .= ' ' . $arrData['advancedCss'];
-        }
+
+        if (!isset($arrData['advancedCss']))
+            return;
+
+        $objTemplate->class .= ' ' . $arrData['advancedCss'];
+
+    }
+
+    public function extendContentElementCssClasses($objElement, $strBuffer)
+    {
+        $css = $objElement->get('advancedCss');
+        return '<div class="content-element '.$css.'">' . $strBuffer . '</div>';
+    }
+
+    public function extendFormCssClasses($arrFields, $intFormId, $objForm)
+    {
+        //echo "<pre>";print_r($objForm->get('advancedCss')); echo "</pre>";
+        //echo "<pre>";print_r($objForm->attributes);echo "</pre>";
+        //echo "<pre>";print_r($arrFields);echo "</pre>";
+
+        return $arrFields;
+
     }
 
     /*
