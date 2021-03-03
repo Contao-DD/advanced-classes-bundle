@@ -891,6 +891,86 @@
               "value":"text-bold"
             }
           }
+        },
+        "9":{
+          "id":"setTextColors",
+          "class":"no-icon ac-col6",
+          "type":"select",
+          "label": "Textfarben",
+          "values":{
+            "1":{
+              "title":".text-primary",
+              "value":"text-primary"
+            },
+            "2":{
+              "title":".text-secondary",
+              "value":"text-secondary"
+            },
+            "3":{
+              "title":".text-dark",
+              "value":"text-dark"
+            },
+            "4":{
+              "title":".text-gray",
+              "value":"text-gray"
+            },
+            "5":{
+              "title":".text-light",
+              "value":"text-light"
+            },
+            "6":{
+              "title":".text-success",
+              "value":"text-success"
+            },
+            "7":{
+              "title":".text-warning",
+              "value":"text-warning"
+            },
+            "8":{
+              "title":".text-error",
+              "value":"text-error"
+            }
+          }
+        },
+        "10":{
+          "id":"setTextBackgroundColor",
+          "class":"no-icon ac-col6",
+          "type":"select",
+          "label": "Hintergrundfarben",
+          "values":{
+            "1":{
+              "title":".bg-primary",
+              "value":"bg-primary"
+            },
+            "2":{
+              "title":".bg-secondary",
+              "value":"bg-secondary"
+            },
+            "3":{
+              "title":".bg-dark",
+              "value":"bg-dark"
+            },
+            "4":{
+              "title":".bg-gray",
+              "value":"bg-gray"
+            },
+            "5":{
+              "title":".bg-light",
+              "value":"bg-light"
+            },
+            "6":{
+              "title":".bg-success",
+              "value":"bg-success"
+            },
+            "7":{
+              "title":".bg-warning",
+              "value":"bg-warning"
+            },
+            "8":{
+              "title":".bg-error",
+              "value":"bg-error"
+            }
+          }
         }
       }
     }
