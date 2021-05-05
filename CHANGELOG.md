@@ -20,9 +20,13 @@
 
 - [feature] add spectre set
 
-.  
-.  
-.  
+## [1.1.0](https://github.com/Contao-DD/advanced-classes-bundle/tree/1.1.0) – 2019-10-09
+
+- [feature] add bulma set
+
+## [1.0.1](https://github.com/Contao-DD/advanced-classes-bundle/tree/1.0.1) – 2019-03-19
+
+- [fix] fix dca for contao 4.7
 
 ## [1.0.0](https://github.com/Contao-DD/advanced-classes-bundle/tree/1.0.0) – 2019-02-08
 
