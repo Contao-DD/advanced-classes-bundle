@@ -50,6 +50,7 @@ class AdvancedClassesHooks extends \Controller
     {
         if ($strTemplate == 'be_main')
         {
+            if(!isset($GLOBALS['TL_CONFIG']['ac_defaultColumnWidth'])) $GLOBALS['TL_CONFIG']['ac_defaultColumnWidth'] = '';
             $strScript = "<script>var advancedClassesSet = '".$GLOBALS['TL_CONFIG']['advancedClassesSet']."';var defaultColumnWidth = '".$GLOBALS['TL_CONFIG']['ac_defaultColumnWidth']."';</script>\n\r</body>";
             return str_replace('</body>', $strScript, $strContent);
         }
