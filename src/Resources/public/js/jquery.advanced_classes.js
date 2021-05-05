@@ -6,7 +6,6 @@
             this.rootElem = $('#pal_advanced_classes_legend');
             if($('#ctrl_advancedCss').length) {
                 var sourceSet = advancedClassesSet;
-                console.log(sourceSet);
                 $.getJSON(sourceSet)
                     .done(function (json) {
                         AdvancedClasses.json = json;
