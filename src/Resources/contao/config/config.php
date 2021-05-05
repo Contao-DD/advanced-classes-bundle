@@ -17,15 +17,15 @@ if(TL_MODE == 'BE')
 {
     if (!isset($GLOBALS['TL_CONFIG']['advancedClassesSets']))
     {
-        $GLOBALS['TL_CONFIG']['advancedClassesSets'] = array();
+        $GLOBALS['TL_CONFIG']['advancedClassesSets'] = [];
     }
-    $GLOBALS['TL_CONFIG']['advancedClassesSets'][] = $modulePath . 'bundles/contaoddadvancedclasses/sets/bootstrap2.json';
-    $GLOBALS['TL_CONFIG']['advancedClassesSets'][] = $modulePath . 'bundles/contaoddadvancedclasses/sets/bootstrap3.json';
-    $GLOBALS['TL_CONFIG']['advancedClassesSets'][] = $modulePath . 'bundles/contaoddadvancedclasses/sets/bootstrap4-alpha.json';
-    $GLOBALS['TL_CONFIG']['advancedClassesSets'][] = $modulePath . 'bundles/contaoddadvancedclasses/sets/bootstrap4.json';
-    $GLOBALS['TL_CONFIG']['advancedClassesSets'][] = $modulePath . 'bundles/contaoddadvancedclasses/sets/materialize.json';
-    $GLOBALS['TL_CONFIG']['advancedClassesSets'][] = $modulePath . 'bundles/contaoddadvancedclasses/sets/bulma.json';
-    $GLOBALS['TL_CONFIG']['advancedClassesSets'][] = $modulePath . 'bundles/contaoddadvancedclasses/sets/spectre.json';
+    $GLOBALS['TL_CONFIG']['advancedClassesSets'][] = 'bundles/contaoddadvancedclasses/sets/bootstrap2.json';
+    $GLOBALS['TL_CONFIG']['advancedClassesSets'][] = 'bundles/contaoddadvancedclasses/sets/bootstrap3.json';
+    $GLOBALS['TL_CONFIG']['advancedClassesSets'][] = 'bundles/contaoddadvancedclasses/sets/bootstrap4-alpha.json';
+    $GLOBALS['TL_CONFIG']['advancedClassesSets'][] = 'bundles/contaoddadvancedclasses/sets/bootstrap4.json';
+    $GLOBALS['TL_CONFIG']['advancedClassesSets'][] = 'bundles/contaoddadvancedclasses/sets/materialize.json';
+    $GLOBALS['TL_CONFIG']['advancedClassesSets'][] = 'bundles/contaoddadvancedclasses/sets/bulma.json';
+    $GLOBALS['TL_CONFIG']['advancedClassesSets'][] = 'bundles/contaoddadvancedclasses/sets/spectre.json';
 }
 
 /**
@@ -34,8 +34,8 @@ if(TL_MODE == 'BE')
 
 // $GLOBALS['TL_HOOKS']['getContentElement'][] = array('\ContaoDD\AdvancedClassesHooks', 'extendContentElementCssClasses');
 // $GLOBALS['TL_HOOKS']['compileFormFields'][] = array('\ContaoDD\AdvancedClassesHooks', 'extendFormCssClasses');
-$GLOBALS['TL_HOOKS']['parseTemplate'][] = array('\ContaoDD\AdvancedClassesHooks', 'extendCssClasses');
-$GLOBALS['TL_HOOKS']['outputBackendTemplate'][] = array('\ContaoDD\AdvancedClassesHooks', 'extendBackendTemplate');
+$GLOBALS['TL_HOOKS']['parseTemplate'][] = ['\ContaoDD\AdvancedClassesHooks', 'extendCssClasses'];
+$GLOBALS['TL_HOOKS']['outputBackendTemplate'][] = ['\ContaoDD\AdvancedClassesHooks', 'extendBackendTemplate'];
 
 /**
  * Backend Javascript
@@ -50,6 +50,7 @@ if (TL_MODE == 'BE') {
  * Css
  */
 if (TL_MODE == 'BE') {
+    if(!isset($GLOBALS['TL_CONFIG']['ac_disableCSS'])) $GLOBALS['TL_CONFIG']['ac_disableCSS'] = 0;
     if($GLOBALS['TL_CONFIG']['ac_disableCSS'] == 0) {
         $GLOBALS['TL_CSS']['advanced_classes'] = 'bundles/contaoddadvancedclasses/css/advanced_classes.css|static';
         $GLOBALS['TL_CSS']['font-awesome'] = 'bundles/contaoddadvancedclasses/vendor/fontello/css/icon.css|static';
