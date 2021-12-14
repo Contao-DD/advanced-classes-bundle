@@ -27,13 +27,7 @@ class AdvancedClassesHooks extends \Controller
 
     }
 
-    public function extendContentElementCssClasses($objElement, $strBuffer)
-    {
-        $css = $objElement->get('advancedCss');
-        return '<div class="content-element '.$css.'">' . $strBuffer . '</div>';
-    }
-
-    public function extendFormCssClasses($contentModel, $buffer, $element)
+    public function extendContentElementCssClasses($contentModel, $buffer, $element)
     {
         if($contentModel->type == 'form' && $contentModel->advancedCss != '') {
             $buffer = str_replace('class="ce_form', 'class="ce_form '.$contentModel->advancedCss, $buffer);
