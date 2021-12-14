@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.3.2](https://github.com/Contao-DD/advanced-classes-bundle/tree/1.3.2) – 2021-12-14
+
+- [fix] fix advanced classes for forms and modules
+
 ## [1.3.1](https://github.com/Contao-DD/advanced-classes-bundle/tree/1.3.1) – 2021-05-05
 
 - [fix] fix php 8 undefined array index errors
