@@ -9,13 +9,11 @@
  * @license http://www.gnu.org/licences/lgpl-3.0.html LGPL
  */
 
+use Contao\Backend;
+
 $dc = &$GLOBALS['TL_DCA']['tl_settings'];
 
-if(version_compare(VERSION, '4.7','>=')) {
-    $dc['palettes']['default'] = str_replace('maxResultsPerPage;', 'maxResultsPerPage;{ac_legend},advancedClassesSet,ac_defaultColumnWidth,ac_disableCSS;', $dc['palettes']['default']);
-} else {
-    $dc['palettes']['default'] = str_replace('staticPlugins;', 'staticPlugins;{ac_legend},advancedClassesSet,ac_defaultColumnWidth,ac_disableCSS;', $dc['palettes']['default']);
-}
+$dc['palettes']['default'] = str_replace('maxResultsPerPage;', 'maxResultsPerPage;{ac_legend},advancedClassesSet,ac_defaultColumnWidth,ac_disableCSS;', $dc['palettes']['default']);
 
 $arrFields = array
 (
@@ -60,9 +58,9 @@ class tl_settings_advanced_classes extends Backend
      * Return all available sets
      * @return array
      */
-    public function getAvailableSetFiles()
+    public function getAvailableSetFiles(): array
     {
-        $arrSets = array();
+        $arrSets = [];
         foreach ($GLOBALS['TL_CONFIG']['advancedClassesSets'] as $key => $value)
         {
             if(!strpos($value,"system/")!==false)

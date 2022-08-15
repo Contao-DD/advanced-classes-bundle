@@ -13,11 +13,10 @@
 
   use Symfony\Component\HttpKernel\Bundle\Bundle;
 
-  /**
-   * Configures the Contao advanced class bundle.
-   *
-   * @author Leo Feyer <https://github.com/leofeyer>
-   */
   class ContaoDDAdvancedClassesBundle extends Bundle
   {
+      public function getPath(): string
+      {
+          return \dirname(__DIR__);
+      }
   }
