@@ -18,7 +18,6 @@ foreach ($dc['palettes'] as $key=>$value) {
         } else if(strpos($value,"useHomeDir;")!==false) {
             $dc['palettes'][$key] = str_replace('useHomeDir;', 'useHomeDir;{advanced_classes_legend},advancedCss;', $value);
         }
-
     }
 }
 
