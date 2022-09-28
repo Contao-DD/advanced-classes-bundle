@@ -17,15 +17,14 @@
     "source" : "https://github.com/contao-dd/advanced-classes-bundle"
   },
   "require": {
-    "php": "^8.0",
+    "php": "^8.1",
     "contao/core-bundle": "^5.0"
   },
   "require-dev": {
-    "contao/manager-plugin": "^2.0"
-  },
-  "conflict": {
-    "contao/core": "*",
-    "contao/manager-plugin": "<2.0 || >=3.0"
+    "contao/manager-plugin": "^2.0",
+    "contao/easy-coding-standard": "^3.0",
+    "phpunit/phpunit": "^9.5",
+    "symfony/phpunit-bridge": "^6.0"
   },
   "autoload": {
     "psr-4": {
@@ -38,7 +37,8 @@
   "config": {
     "allow-plugins": {
       "contao-components/installer": true,
-      "contao/manager-plugin": true
+      "contao/manager-plugin": true,
+      "dealerdirect/phpcodesniffer-composer-installer": true
     }
   }
 }
