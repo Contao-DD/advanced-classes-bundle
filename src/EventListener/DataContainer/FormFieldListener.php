@@ -18,7 +18,6 @@ use Contao\CoreBundle\DependencyInjection\Attribute\AsCallback;
 use Contao\DataContainer;
 use Symfony\Component\HttpFoundation\RequestStack;
 
-#[AsCallback(table: 'tl_form_field', target: 'config.onload')]
 class FormFieldListener
 {
     use ListenerHelperTrait;
@@ -30,8 +29,17 @@ class FormFieldListener
         $this->requestStack = $requestStack;
     }
 
-    public function __invoke(DataContainer $dc = null): void
+    #[AsCallback(table: 'tl_form_field', target: 'config.onload')]
+    public function onLoad(DataContainer $dc = null): void
     {
         $this->manipulateDca($dc, 'accesskey;');
+    }
+
+    #[AsCallback(table: 'tl_form_field', target: 'fields.advancedCss.xlabel')]
+    public function onXlabel(DataContainer $dc): string
+    {
+        $config = $this->getConfigOfFormId($dc->activeRecord->pid);
+
+        return $this->generateScriptTag($config);
     }
 }
