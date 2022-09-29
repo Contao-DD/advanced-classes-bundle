@@ -1,9 +1,12 @@
 <?php
 
-/**
- * Contao Open Source CMS
+declare(strict_types=1);
+
+/*
+ * advanced-classes-bundle for Contao Open Source CMS
  *
- * Copyright (c) 2015 Contao Stammtisch Dresden
+ * Copyright (c) 2022 Contao Stammtisch Dresden
+ *
  * @package advanced-classes
  * @author Mathias Arzberger <develop@pdir.de>
  * @license http://www.gnu.org/licences/lgpl-3.0.html LGPL
@@ -11,25 +14,20 @@
 
 namespace ContaoDD\AdvancedClassesBundle\EventListener;
 
-use Contao\CoreBundle\ServiceAnnotation\Hook;
-use Contao\Template;
+use Contao\CoreBundle\DependencyInjection\Attribute\AsHook;
 
-/**
- * @Hook("parseTemplate")
- */
+#[AsHook('parseTemplate')]
 class ParseTemplateListener
 {
     /*
      * manipulate the given template object to add advanced css to the existing css class
      */
-    public function __invoke(Template $template): void
+    public function __invoke($template): void
     {
-        $arrData = $template->getData();
-
-        if (!isset($arrData['advancedCss']))
+        if (!isset($template->advancedCss) || '' === $template->advancedCss) {
             return;
+        }
 
-        $template->class .= ' ' . $arrData['advancedCss'];
-
+        $template->class .= ' '.$template->advancedCss;
     }
 }
