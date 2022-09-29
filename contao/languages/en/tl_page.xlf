@@ -1,0 +1,27 @@
+<?xml version="1.0" ?><xliff version="1.1">
+  <file datatype="php" original="scontao/languages/en/tl_page.php" source-language="en">
+    <body>
+      <trans-unit id="tl_page.ac_legend">
+        <source>Advanced CSS-Settings</source>
+      </trans-unit>
+      <trans-unit id="tl_page.ac_set.0">
+        <source>Advanced Classes Set</source>
+      </trans-unit>
+      <trans-unit id="tl_page.ac_set.1">
+        <source>Here you can select the available sets.</source>
+      </trans-unit>
+      <trans-unit id="tl_page.ac_defaultColumnWidth.0">
+        <source>Activate Default Column Width</source>
+      </trans-unit>
+      <trans-unit id="tl_page.ac_defaultColumnWidth.1">
+        <source>Activate Default Column Width</source>
+      </trans-unit>
+      <trans-unit id="tl_page.ac_disableCSS.0">
+        <source>Disable Module CSS</source>
+      </trans-unit>
+      <trans-unit id="tl_page.ac_disableCSS.1">
+        <source>Here you can disable the module's own CSS. Can be used to provide your own CSS.</source>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

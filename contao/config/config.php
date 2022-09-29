@@ -5,35 +5,6 @@ use ContaoDD\EventListener\ParseTemplateListener;
 use Symfony\Component\HttpFoundation\Request;
 
 /**
- * General settings
- */
-
-$GLOBALS['TL_CONFIG']['advancedClassesSet'] = 'both';
-
-/**
- * add default sets
- *
- * hint: add update save json files via own extension or use default localconfig.php file
- * use $GLOBALS['TL_CONFIG']['advancedClassesSets'][] = '/files/theme/myCssSet.json';
- *
- */
-if(System::getContainer()->get('contao.routing.scope_matcher')->isBackendRequest(System::getContainer()->get('request_stack')->getCurrentRequest() ?? Request::create('')))
-{
-    if (!isset($GLOBALS['TL_CONFIG']['advancedClassesSets']))
-    {
-        $GLOBALS['TL_CONFIG']['advancedClassesSets'] = [];
-    }
-
-    $GLOBALS['TL_CONFIG']['advancedClassesSets'][] = 'bundles/contaoddadvancedclasses/sets/bootstrap2.json';
-    $GLOBALS['TL_CONFIG']['advancedClassesSets'][] = 'bundles/contaoddadvancedclasses/sets/bootstrap3.json';
-    $GLOBALS['TL_CONFIG']['advancedClassesSets'][] = 'bundles/contaoddadvancedclasses/sets/bootstrap4-alpha.json';
-    $GLOBALS['TL_CONFIG']['advancedClassesSets'][] = 'bundles/contaoddadvancedclasses/sets/bootstrap4.json';
-    $GLOBALS['TL_CONFIG']['advancedClassesSets'][] = 'bundles/contaoddadvancedclasses/sets/materialize.json';
-    $GLOBALS['TL_CONFIG']['advancedClassesSets'][] = 'bundles/contaoddadvancedclasses/sets/bulma.json';
-    $GLOBALS['TL_CONFIG']['advancedClassesSets'][] = 'bundles/contaoddadvancedclasses/sets/spectre.json';
-}
-
-/**
  * Backend Javascript
  */
 if (System::getContainer()->get('contao.routing.scope_matcher')->isBackendRequest(System::getContainer()->get('request_stack')->getCurrentRequest() ?? Request::create(''))) {
