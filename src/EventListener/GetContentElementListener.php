@@ -26,7 +26,7 @@ class GetContentElementListener
     public function __invoke(ContentModel $contentModel, string $buffer, $element): string
     {
         if (isset($contentModel->advancedCss) && '' !== $contentModel->advancedCss) {
-            return preg_replace("/class=\"/",'class="' . $contentModel->advancedCss . ' ',$buffer,1);
+            return preg_replace('/class="/', 'class="'.$contentModel->advancedCss.' ', $buffer, 1);
         }
 
         return $buffer;
