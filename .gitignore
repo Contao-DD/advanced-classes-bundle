@@ -1,3 +1,4 @@
-/assets/js/json.js
 .idea
 .tx
+vendor
+composer.lock
