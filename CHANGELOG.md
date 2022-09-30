@@ -10,8 +10,14 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
-## [1.4.0](https://github.com/Contao-DD/advanced-classes-bundle/tree/1.4.0) – 2022-09-02
+## [1.5.0](https://github.com/Contao-DD/advanced-classes-bundle/tree/1.5.0) – 2022-09-29
 
+- [Added] Allow sets in form fields
+
+## [1.4.0](https://github.com/Contao-DD/advanced-classes-bundle/tree/1.4.0) – 2022-09-29
+
+- [Changed] Refactor code for Contao 5
+- [Changed] Set PHP 8.1 as minimum requirement
 - [Changed] Set Contao 5 as minimum requirement
 
 ## [1.3.2](https://github.com/Contao-DD/advanced-classes-bundle/tree/1.3.2) – 2021-12-14

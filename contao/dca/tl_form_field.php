@@ -9,7 +9,7 @@
  * @license http://www.gnu.org/licences/lgpl-3.0.html LGPL
  */
 
-$GLOBALS['TL_DCA']['tl_content']['fields']['advancedCss'] = [
+$GLOBALS['TL_DCA']['tl_form_field']['fields']['advancedCss'] = [
     'exclude' => true,
     'search' => false,
     'inputType' => 'text',

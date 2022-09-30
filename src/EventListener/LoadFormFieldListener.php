@@ -15,19 +15,18 @@ declare(strict_types=1);
 namespace ContaoDD\AdvancedClassesBundle\EventListener;
 
 use Contao\CoreBundle\DependencyInjection\Attribute\AsHook;
+use Contao\Form;
+use Contao\Widget;
 
-#[AsHook('parseTemplate')]
-class ParseTemplateListener
+#[AsHook('loadFormField')]
+class LoadFormFieldListener
 {
-    /*
-     * manipulate the given template object to add advanced css to the existing css class
-     */
-    public function __invoke($template): void
+    public function __invoke(Widget $widget, string $formId, array $formData, Form $form): Widget
     {
-        if (!isset($template->advancedCss) || '' === $template->advancedCss) {
-            return;
+        if ('' !== $form->ac_set && '' !== $widget->advancedCss) {
+            $widget->prefix .= ' ' . $widget->advancedCss;
         }
 
-        $template->class .= ' '.$template->advancedCss;
+        return $widget;
     }
 }

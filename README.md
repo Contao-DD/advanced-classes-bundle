@@ -29,7 +29,8 @@ Screenshots
 Systemvoraussetzungen / System requirements
 -------------------
 
-* [Contao](https://github.com/contao/standard-edition) 4.x
+* [Contao 5](https://github.com/contao/contao)
+* [Contao 5 Managed Edition](https://github.com/contao/managed-edition)
 
 
 Installation & Configuration
@@ -39,14 +40,14 @@ DE:
 
 * Installiere die Erweiterung über den Contao Manager
 * Aktualisiere die Datenbank
-* Wähle das CSS-Klassen-Set in den Einstellungen aus
+* Wähle das CSS-Klassen-Set in deiner Website-Startseite aus
 * Setze die gewünschten Klassen in den Elementen
 
 EN:
 
 * Install the extension via the contao manager
 * Update your database
-* Select CSS Class Set in the settings
+* Select CSS Class Set in the root page settings
 * Set the extended class of every element you wish
 
 
@@ -56,13 +57,13 @@ Eigenes Set / Custom Set
 DE:
 
 * Lege eine JSON-Datei an ([Beispiel](https://github.com/Contao-DD/advanced-classes-bundle/blob/master/src/Resources/public/sets/spectre.json)) und lege sie z. B. im files-Ordner ab
-* Lege folgende Datei an oder bearbeite sie: **app/Resources/contao/config/config.php**
+* Lege folgende Datei an oder bearbeite sie: **contao/config/config.php**
 * Füge in der config.php folgendes ein um das Set zu registrieren. Anschließend muss der Cache im Contao Manager geleert werden.
 
 ```
 <?php
 
-$GLOBALS['TL_CONFIG']['advancedClassesSets'][] = '/files/sets/custom-set.json';
+$GLOBALS['customAdvancedClassesSets'][] = '/files/sets/custom-set.json';
 ```
 
 * Danach kann das Set in den Einstellungen ausgewählt werden.
@@ -76,7 +77,7 @@ EN:
 ```
 <?php
 
-$GLOBALS['TL_CONFIG']['advancedClassesSets'][] = '/files/sets/custom-set.json';
+$GLOBALS['customAdvancedClassesSets'][] = '/files/sets/custom-set.json';
 ```
 
 * Now you can choose the set in the settings.
