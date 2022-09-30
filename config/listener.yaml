@@ -2,14 +2,11 @@ services:
   _defaults:
     autoconfigure: true
 
+  advanced_classes.listener.data_container.ac_set:
+    class: ContaoDD\AdvancedClassesBundle\EventListener\DataContainer\AcSetListener
+
   advanced_classes.listener.data_container.content:
     class: ContaoDD\AdvancedClassesBundle\EventListener\DataContainer\ContentListener
-    public: true
-    arguments:
-      - '@request_stack'
-
-  advanced_classes.listener.data_container.form:
-    class: ContaoDD\AdvancedClassesBundle\EventListener\DataContainer\FormListener
     public: true
     arguments:
       - '@request_stack'
@@ -20,8 +17,8 @@ services:
     arguments:
       - '@request_stack'
 
-  advanced_classes.listener.data_container.page:
-    class: ContaoDD\AdvancedClassesBundle\EventListener\DataContainer\PageListener
+  advanced_classes.listener.compile_form_fields:
+    class: ContaoDD\AdvancedClassesBundle\EventListener\LoadFormFieldListener
 
   advanced_classes.listener.get_content_element:
     class: ContaoDD\AdvancedClassesBundle\EventListener\GetContentElementListener

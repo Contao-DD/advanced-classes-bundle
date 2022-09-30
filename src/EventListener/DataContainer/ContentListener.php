@@ -18,7 +18,6 @@ use Contao\CoreBundle\DependencyInjection\Attribute\AsCallback;
 use Contao\DataContainer;
 use Symfony\Component\HttpFoundation\RequestStack;
 
-#[AsCallback(table: 'tl_content', target: 'config.onload')]
 class ContentListener
 {
     use ListenerHelperTrait;
@@ -30,9 +29,18 @@ class ContentListener
         $this->requestStack = $requestStack;
     }
 
-    public function __invoke(DataContainer $dc = null): void
+    #[AsCallback(table: 'tl_content', target: 'config.onload')]
+    public function onLoad(DataContainer $dc = null): void
     {
         $this->manipulateDca($dc, 'cssID;');
         $this->manipulateDca($dc, 'useHomeDir;');
+    }
+
+    #[AsCallback(table: 'tl_content', target: 'fields.advancedCss.xlabel')]
+    public function onXlabel(DataContainer $dc): string
+    {
+        $config = $this->getConfigOfRootPageByContentElementId($dc->activeRecord->pid);
+
+        return $this->generateScriptTag($config);
     }
 }

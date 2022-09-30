@@ -10,7 +10,6 @@
  */
 
 $GLOBALS['TL_DCA']['tl_content']['fields']['advancedCss'] = [
-    'label' => $GLOBALS['TL_LANG']['MSC']['advanced_classes_legend'],
     'exclude' => true,
     'search' => false,
     'inputType' => 'text',

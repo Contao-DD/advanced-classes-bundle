@@ -17,27 +17,18 @@ namespace ContaoDD\AdvancedClassesBundle\EventListener\DataContainer;
 use Contao\CoreBundle\DependencyInjection\Attribute\AsCallback;
 
 #[AsCallback(table: 'tl_page', target: 'fields.ac_set.options')]
-class PageListener
+#[AsCallback(table: 'tl_form', target: 'fields.ac_set.options')]
+class AcSetListener
 {
+    use ListenerHelperTrait;
+
     public function __invoke(): array
     {
-        dump('tl_page');
-
-        $sets = [];
-
-        $sets[] = 'bundles/contaoddadvancedclasses/sets/bootstrap2.json';
-        $sets[] = 'bundles/contaoddadvancedclasses/sets/bootstrap3.json';
-        $sets[] = 'bundles/contaoddadvancedclasses/sets/bootstrap4-alpha.json';
-        $sets[] = 'bundles/contaoddadvancedclasses/sets/bootstrap4.json';
-        $sets[] = 'bundles/contaoddadvancedclasses/sets/materialize.json';
-        $sets[] = 'bundles/contaoddadvancedclasses/sets/bulma.json';
-        $sets[] = 'bundles/contaoddadvancedclasses/sets/spectre.json';
-
         // add custom sets
         if (isset($GLOBALS['customAdvancedClassesSets']) && \is_array($GLOBALS['customAdvancedClassesSets'])) {
-            $sets = array_merge($sets, $GLOBALS['customAdvancedClassesSets']);
+            $this->sets = array_merge($this->sets, $GLOBALS['customAdvancedClassesSets']);
         }
 
-        return $sets;
+        return $this->sets;
     }
 }

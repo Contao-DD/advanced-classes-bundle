@@ -10,6 +10,10 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
+## [1.5.0](https://github.com/Contao-DD/advanced-classes-bundle/tree/1.5.0) – 2022-09-29
+
+- [Added] Allow sets in form fields
+
 ## [1.4.0](https://github.com/Contao-DD/advanced-classes-bundle/tree/1.4.0) – 2022-09-29
 
 - [Changed] Refactor code for Contao 5
