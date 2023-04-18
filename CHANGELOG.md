@@ -10,6 +10,10 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
+## [1.5.1](https://github.com/Contao-DD/advanced-classes-bundle/tree/1.5.1) – 2023-03-24
+
+- [Added] Add styles for dark mode in Contao 5.1
+
 ## [1.5.0](https://github.com/Contao-DD/advanced-classes-bundle/tree/1.5.0) – 2022-09-29
 
 - [Added] Allow sets in form fields
