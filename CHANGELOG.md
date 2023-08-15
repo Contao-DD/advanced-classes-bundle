@@ -10,6 +10,10 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
+## [1.5.2](https://github.com/Contao-DD/advanced-classes-bundle/tree/1.5.2) – 2023-08-15
+
+- [Changed] Load css files instead of scss files in the backend
+
 ## [1.5.1](https://github.com/Contao-DD/advanced-classes-bundle/tree/1.5.1) – 2023-03-24
 
 - [Added] Add styles for dark mode in Contao 5.1
