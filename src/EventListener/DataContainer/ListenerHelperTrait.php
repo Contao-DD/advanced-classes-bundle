@@ -38,7 +38,7 @@ trait ListenerHelperTrait
             $GLOBALS['TL_CSS']['font-awesome'] = 'bundles/contaoddadvancedclasses/vendor/fontello/css/icon.css|static';
         }
         $GLOBALS['TL_CSS']['advanced_classes_settings'] = 'bundles/contaoddadvancedclasses/css/advanced_classes_settings.css|static';
-
+        
         return sprintf(
             '<script>var advancedClassesSet = \'%s\';var defaultColumnWidth = \'%s\';</script>',
             $config[0],

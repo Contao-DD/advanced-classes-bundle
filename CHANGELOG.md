@@ -10,6 +10,10 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
+## [1.5.3](https://github.com/Contao-DD/advanced-classes-bundle/tree/1.5.3) – 2023-09-22
+
+- [Fixed] Fix advanced classes for news and events content elements
+
 ## [1.5.2](https://github.com/Contao-DD/advanced-classes-bundle/tree/1.5.2) – 2023-08-15
 
 - [Changed] Load css files instead of scss files in the backend
