@@ -3,7 +3,12 @@
     var AdvancedClasses = {
         onReady: function () {
             this.json = '';
-            this.rootElem = $('#pal_advanced_classes_legend');
+            this.rootElem = $('[data-contao--toggle-fieldset-id-value=advanced_classes_legend]');
+            
+            if(!this.rootElem.length) {
+                this.rootElem = $('#pal_advanced_classes_legend');
+            }
+            
             if($('#ctrl_advancedCss').length) {
                 var sourceSet = advancedClassesSet;
                 $.getJSON(sourceSet)
@@ -22,7 +27,7 @@
             var $dataset = this.json;
             // append form container
             var container = $("<div id='advancedFormContainer'/>");
-            $(this.rootElem).append(container);
+            this.rootElem.append(container);
 
             var sections = $dataset.sections;
             Object.keys(sections).forEach(function (key) {
