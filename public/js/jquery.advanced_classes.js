@@ -3,11 +3,10 @@
     var AdvancedClasses = {
         onReady: function () {
             this.json = '';
+            this.rootElem = $('#pal_advanced_classes_legend');
             
             if(0 === $('#pal_advanced_classes_legend').length) {
                 this.rootElem = $('[data-contao--toggle-fieldset-id-value=advanced_classes_legend]');
-            } else {
-                this.rootElem = $('#pal_advanced_classes_legend');
             }
             
             if($('#ctrl_advancedCss').length) {
