@@ -15,7 +15,11 @@ declare(strict_types=1);
 namespace ContaoDD\AdvancedClassesBundle\EventListener\DataContainer;
 
 use Contao\CoreBundle\DependencyInjection\Attribute\AsCallback;
+use Contao\Database;
 use Contao\DataContainer;
+use Contao\NewsModel;
+use Contao\NewsArchiveModel;
+use Contao\PageModel;
 use Symfony\Component\HttpFoundation\RequestStack;
 
 class ContentListener
@@ -26,6 +30,7 @@ class ContentListener
 
     public function __construct(RequestStack $requestStack)
     {
+        $this->database = Database::getInstance();
         $this->requestStack = $requestStack;
     }
 
@@ -39,8 +44,49 @@ class ContentListener
     #[AsCallback(table: 'tl_content', target: 'fields.advancedCss.xlabel')]
     public function onXlabel(DataContainer $dc): string
     {
-        $config = $this->getConfigOfRootPageByContentElementId($dc->activeRecord->pid);
+        $config = null;
+        
+        if ('tl_news' === $dc->activeRecord->ptable || 'tl_calendar_events' === $dc->activeRecord->ptable) {
+            $archiveId = NewsModel::findByPk($dc->activeRecord->pid)->pid;
+            $jumpToId = NewsArchiveModel::findByPk($archiveId)->jumpTo;
+            $config = $this->getConfig($this->getRootPage($jumpToId));
+        }
+        
+        if (null === $config) {
+            $config = $this->getConfigOfRootPageByContentElementId((int) $dc->activeRecord->pid);
+        }
 
         return $this->generateScriptTag($config);
+    }
+
+    /**
+     * Find the root page
+     *
+     * @param int $intId
+     */
+    protected function getRootPage($intId)
+    {
+        $rootPageId = $this->getParentPage($intId);
+        return PageModel::findByPk($rootPageId);
+    }
+
+    /**
+     * Get parent page
+     *
+     * @param int $intId
+     * @return object DatabaseResult
+     */
+    protected function getParentPage($intId)
+    {
+        $objResult = $this->database->prepare("SELECT id, pid, type FROM tl_page WHERE id=?")->execute($intId);
+
+        if ($objResult->pid == 0 || $objResult->type == 'root')
+        {
+            return $objResult->id;
+        }
+        else
+        {
+            return $this->getParentPage($objResult->pid);
+        }
     }
 }
