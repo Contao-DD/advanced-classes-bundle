@@ -10,6 +10,10 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
+## [1.5.4](https://github.com/Contao-DD/advanced-classes-bundle/tree/1.5.4) – 2024-02-26
+
+- [Fixed] Fix advanced classes for news and events content elements
+
 ## [1.5.3](https://github.com/Contao-DD/advanced-classes-bundle/tree/1.5.3) – 2024-02-14
 
 - [Fixed] Fix advanced classes settings for contao 5.3
