@@ -14,6 +14,10 @@ Types of changes
 
 - [Fixed] Fix advanced classes for news and events content elements
 
+## [1.5.3](https://github.com/Contao-DD/advanced-classes-bundle/tree/1.5.3) – 2024-02-14
+
+- [Fixed] Fix advanced classes settings for contao 5.3
+
 ## [1.5.2](https://github.com/Contao-DD/advanced-classes-bundle/tree/1.5.2) – 2023-08-15
 
 - [Changed] Load css files instead of scss files in the backend
