@@ -10,6 +10,11 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
+## [1.6.0](https://github.com/Contao-DD/advanced-classes-bundle/tree/1.6.0) – 2024-02-27
+
+- [Added] Add bootstrap 5 set
+- [Changed] Improve styling
+
 ## [1.5.4](https://github.com/Contao-DD/advanced-classes-bundle/tree/1.5.4) – 2024-02-26
 
 - [Fixed] Remove duplicated CSS classes

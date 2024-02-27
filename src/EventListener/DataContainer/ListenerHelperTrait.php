@@ -26,6 +26,7 @@ trait ListenerHelperTrait
         'bundles/contaoddadvancedclasses/sets/bootstrap3.json',
         'bundles/contaoddadvancedclasses/sets/bootstrap4-alpha.json',
         'bundles/contaoddadvancedclasses/sets/bootstrap4.json',
+        'bundles/contaoddadvancedclasses/sets/bootstrap5.json',
         'bundles/contaoddadvancedclasses/sets/materialize.json',
         'bundles/contaoddadvancedclasses/sets/bulma.json',
         'bundles/contaoddadvancedclasses/sets/spectre.json',
