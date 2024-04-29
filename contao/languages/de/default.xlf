@@ -33,6 +33,10 @@
         <source>Here you can set css classes by a simple form</source>
         <target>Über ein einfaches Formular kannst du dem Element weitere CSS-Klassen hinzufügen.</target>
       </trans-unit>
+      <trans-unit id="tl_content.advancedCss.noConfigMessage">
+        <source>No config found.</source>
+        <target>Keine Konfiguration gefunden.</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>
