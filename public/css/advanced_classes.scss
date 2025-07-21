@@ -62,7 +62,6 @@
         }
         
         &.select {
-            background-color: #eee;
             padding: 10px;
             -webkit-border-radius: 3px;
             -moz-border-radius: 3px;
@@ -71,6 +70,7 @@
             box-sizing: border-box;
             display: flex;
             align-items: center;
+            flex-wrap: wrap;
 
             &:before {
                 font-size: 18px;
@@ -93,6 +93,8 @@
             }
 
             select {
+                background: #fafafa;
+                
                 option {
                     padding: 4px 0;
                 }
@@ -133,6 +135,10 @@ html[data-color-scheme=dark] {
     #advancedFormContainer {
         h3:before {
             color: #fff;
+        }
+
+        .value.select select {
+            background: #000;
         }
 
         select:focus-visible {

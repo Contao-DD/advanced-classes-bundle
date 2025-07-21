@@ -3,6 +3,371 @@
   "version": "1",
   "sections": {
     "1":{
+      "secId":"gridSetCol",
+      "secHeadline":"Grid-Attribut hinzufügen",
+      "secClass":"icon-th-large",
+      "cssSet":{
+        "1":{
+          "id":"gridSetColSelect1",
+          "class":"no-icon ac-col6",
+          "type":"select",
+          "values":{
+            "1":{
+              "title":".grid",
+              "value":"grid"
+            },
+            "2":{
+              "title":".fixed-grid",
+              "value":"fixed-grid"
+            }
+          }
+        }
+      }
+    },
+    "2": {
+      "secId": "gridSetSize",
+      "secHeadline": "Spaltenanzahl festlegen",
+      "secClass": "icon-th-large",
+      "cssSet": {
+        "1": {
+          "id": "gridSetSizeSelect1",
+          "class": "no-icon ac-col6",
+          "type": "select",
+          "label": "Alle Größen",
+          "values": {
+            "1": {
+              "title": ".has-1-cols",
+              "value": "has-1-cols"
+            },
+            "2": {
+              "title": ".has-2-cols",
+              "value": "has-2-cols"
+            },
+            "3": {
+              "title": ".has-3-cols",
+              "value": "has-3-cols"
+            },
+            "4": {
+              "title": ".has-4-cols",
+              "value": "has-4-cols"
+            },
+            "5": {
+              "title": ".has-5-cols",
+              "value": "has-5-cols"
+            },
+            "6": {
+              "title": ".has-6-cols",
+              "value": "has-6-cols"
+            },
+            "7": {
+              "title": ".has-7-cols",
+              "value": "has-7-cols"
+            },
+            "8": {
+              "title": ".has-8-cols",
+              "value": "has-8-cols"
+            },
+            "9": {
+              "title": ".has-9-cols",
+              "value": "has-9-cols"
+            },
+            "10": {
+              "title": ".has-10-cols",
+              "value": "has-10-cols"
+            },
+            "11": {
+              "title": ".has-11-cols",
+              "value": "has-11-cols"
+            },
+            "12": {
+              "title": ".has-12-cols",
+              "value": "has-12-cols"
+            }
+          }
+        },
+        "2": {
+          "id": "gridSetSizeSelect2",
+          "class": "icon-mobile ac-col6",
+          "type": "select",
+          "label": "Bis 768px",
+          "values": {
+            "1": {
+              "title": ".has-1-cols-mobile",
+              "value": "has-1-cols-mobile"
+            },
+            "2": {
+              "title": ".has-2-cols-mobile",
+              "value": "has-2-cols-mobile"
+            },
+            "3": {
+              "title": ".has-3-cols-mobile",
+              "value": "has-3-cols-mobile"
+            },
+            "4": {
+              "title": ".has-4-cols-mobile",
+              "value": "has-4-cols-mobile"
+            },
+            "5": {
+              "title": ".has-5-cols-mobile",
+              "value": "has-5-cols-mobile"
+            },
+            "6": {
+              "title": ".has-6-cols-mobile",
+              "value": "has-6-cols-mobile"
+            },
+            "7": {
+              "title": ".has-7-cols-mobile",
+              "value": "has-7-cols-mobile"
+            },
+            "8": {
+              "title": ".has-8-cols-mobile",
+              "value": "has-8-cols-mobile"
+            },
+            "9": {
+              "title": ".has-9-cols-mobile",
+              "value": "has-9-cols-mobile"
+            },
+            "10": {
+              "title": ".has-10-cols-mobile",
+              "value": "has-10-cols-mobile"
+            },
+            "11": {
+              "title": ".has-11-cols-mobile",
+              "value": "has-11-cols-mobile"
+            },
+            "12": {
+              "title": ".has-12-cols-mobile",
+              "value": "has-12-cols-mobile"
+            }
+          }
+        },
+        "3": {
+          "id": "gridSetSizeSelect3",
+          "class": "icon-tablet ac-col6",
+          "type": "select",
+          "label": "Ab 769px",
+          "values": {
+            "1": {
+              "title": ".has-1-cols-tablet",
+              "value": "has-1-cols-tablet"
+            },
+            "2": {
+              "title": ".has-2-cols-tablet",
+              "value": "has-2-cols-tablet"
+            },
+            "3": {
+              "title": ".has-3-cols-tablet",
+              "value": "has-3-cols-tablet"
+            },
+            "4": {
+              "title": ".has-4-cols-tablet",
+              "value": "has-4-cols-tablet"
+            },
+            "5": {
+              "title": ".has-5-cols-tablet",
+              "value": "has-5-cols-tablet"
+            },
+            "6": {
+              "title": ".has-6-cols-tablet",
+              "value": "has-6-cols-tablet"
+            },
+            "7": {
+              "title": ".has-7-cols-tablet",
+              "value": "has-7-cols-tablet"
+            },
+            "8": {
+              "title": ".has-8-cols-tablet",
+              "value": "has-8-cols-tablet"
+            },
+            "9": {
+              "title": ".has-9-cols-tablet",
+              "value": "has-9-cols-tablet"
+            },
+            "10": {
+              "title": ".has-10-cols-tablet",
+              "value": "has-10-cols-tablet"
+            },
+            "11": {
+              "title": ".has-11-cols-tablet",
+              "value": "has-11-cols-tablet"
+            },
+            "12": {
+              "title": ".has-12-cols-tablet",
+              "value": "has-12-cols-tablet"
+            }
+          }
+        },
+        "4": {
+          "id": "gridSetSizeSelect4",
+          "class": "icon-laptop ac-col6",
+          "type": "select",
+          "label": "Ab 1024px",
+          "values": {
+            "1": {
+              "title": ".has-1-cols-desktop",
+              "value": "has-1-cols-desktop"
+            },
+            "2": {
+              "title": ".has-2-cols-desktop",
+              "value": "has-2-cols-desktop"
+            },
+            "3": {
+              "title": ".has-3-cols-desktop",
+              "value": "has-3-cols-desktop"
+            },
+            "4": {
+              "title": ".has-4-cols-desktop",
+              "value": "has-4-cols-desktop"
+            },
+            "5": {
+              "title": ".has-5-cols-desktop",
+              "value": "has-5-cols-desktop"
+            },
+            "6": {
+              "title": ".has-6-cols-desktop",
+              "value": "has-6-cols-desktop"
+            },
+            "7": {
+              "title": ".has-7-cols-desktop",
+              "value": "has-7-cols-desktop"
+            },
+            "8": {
+              "title": ".has-8-cols-desktop",
+              "value": "has-8-cols-desktop"
+            },
+            "9": {
+              "title": ".has-9-cols-desktop",
+              "value": "has-9-cols-desktop"
+            },
+            "10": {
+              "title": ".has-10-cols-desktop",
+              "value": "has-10-cols-desktop"
+            },
+            "11": {
+              "title": ".has-11-cols-desktop",
+              "value": "has-11-cols-desktop"
+            },
+            "12": {
+              "title": ".has-12-cols-desktop",
+              "value": "has-12-cols-desktop"
+            }
+          }
+        },
+        "5": {
+          "id": "gridSetSizeSelect5",
+          "class": "icon-desktop ac-col6",
+          "type": "select",
+          "label": "Ab 1216px",
+          "values": {
+            "1": {
+              "title": ".has-1-cols-widescreen",
+              "value": "has-1-cols-widescreen"
+            },
+            "2": {
+              "title": ".has-2-cols-widescreen",
+              "value": "has-2-cols-widescreen"
+            },
+            "3": {
+              "title": ".has-3-cols-widescreen",
+              "value": "has-3-cols-widescreen"
+            },
+            "4": {
+              "title": ".has-4-cols-widescreen",
+              "value": "has-4-cols-widescreen"
+            },
+            "5": {
+              "title": ".has-5-cols-widescreen",
+              "value": "has-5-cols-widescreen"
+            },
+            "6": {
+              "title": ".has-6-cols-widescreen",
+              "value": "has-6-cols-widescreen"
+            },
+            "7": {
+              "title": ".has-7-cols-widescreen",
+              "value": "has-7-cols-widescreen"
+            },
+            "8": {
+              "title": ".has-8-cols-widescreen",
+              "value": "has-8-cols-widescreen"
+            },
+            "9": {
+              "title": ".has-9-cols-widescreen",
+              "value": "has-9-cols-widescreen"
+            },
+            "10": {
+              "title": ".has-10-cols-widescreen",
+              "value": "has-10-cols-widescreen"
+            },
+            "11": {
+              "title": ".has-11-cols-widescreen",
+              "value": "has-11-cols-widescreen"
+            },
+            "12": {
+              "title": ".has-12-cols-widescreen",
+              "value": "has-12-cols-widescreen"
+            }
+          }
+        },
+        "6": {
+          "id": "gridSetSizeSelect6",
+          "class": "icon-desktop ac-col6",
+          "type": "select",
+          "label": "Ab 1408px",
+          "values": {
+            "1": {
+              "title": ".has-1-cols-fullhd",
+              "value": "has-1-cols-fullhd"
+            },
+            "2": {
+              "title": ".has-2-cols-fullhd",
+              "value": "has-2-cols-fullhd"
+            },
+            "3": {
+              "title": ".has-3-cols-fullhd",
+              "value": "has-3-cols-fullhd"
+            },
+            "4": {
+              "title": ".has-4-cols-fullhd",
+              "value": "has-4-cols-fullhd"
+            },
+            "5": {
+              "title": ".has-5-cols-fullhd",
+              "value": "has-5-cols-fullhd"
+            },
+            "6": {
+              "title": ".has-6-cols-fullhd",
+              "value": "has-6-cols-fullhd"
+            },
+            "7": {
+              "title": ".has-7-cols-fullhd",
+              "value": "has-7-cols-fullhd"
+            },
+            "8": {
+              "title": ".has-8-cols-fullhd",
+              "value": "has-8-cols-fullhd"
+            },
+            "9": {
+              "title": ".has-9-cols-fullhd",
+              "value": "has-9-cols-fullhd"
+            },
+            "10": {
+              "title": ".has-10-cols-fullhd",
+              "value": "has-10-cols-fullhd"
+            },
+            "11": {
+              "title": ".has-11-cols-fullhd",
+              "value": "has-11-cols-fullhd"
+            },
+            "12": {
+              "title": ".has-12-cols-fullhd",
+              "value": "has-12-cols-fullhd"
+            }
+          }
+        }
+      }
+    },
+    "3":{
       "secId":"columnSetCol",
       "secHeadline":"Col-Attribut hinzufügen",
       "secClass":"icon-th-large",
@@ -24,7 +389,7 @@
         }
       }
     },
-    "2": {
+    "4": {
       "secId": "columnSetSize",
       "secHeadline": "Spaltenbreiten festlegen",
       "secClass": "icon-th-large",
@@ -361,7 +726,7 @@
         }
       }
     },
-    "3": {
+    "5": {
       "secId": "columnSetOffset",
       "secHeadline": "Spalten-Offset festlegen",
       "secClass": "icon-indent-right",
@@ -698,7 +1063,7 @@
         }
       }
     },
-    "4":{
+    "6":{
       "secId":"columnSetColumnClasses",
       "secHeadline":"Weitere Klassen für Spalten",
       "secClass":"col6",
@@ -741,7 +1106,7 @@
         }
       }
     },
-    "5":{
+    "7":{
       "secId":"columnSetColors",
       "secHeadline":"Farben",
       "secClass":"col6",
@@ -949,7 +1314,7 @@
         }
       }
     },
-    "6":{
+    "8":{
       "secId":"columnSetClasses",
       "secHeadline":"Klassen für Inhaltselemente",
       "secClass":"",

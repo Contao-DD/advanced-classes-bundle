@@ -61,6 +61,10 @@ trait ListenerHelperTrait
             // get pid of content element
             $content = ContentModel::findById($pid);
 
+            while ($content->ptable === 'tl_content') {
+                $content = ContentModel::findById($content->pid);
+            }
+
             if (null !== $content) {
                 $pid = $content->pid;
             }
