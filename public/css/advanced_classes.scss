@@ -2,28 +2,35 @@
     margin: 0 15px;
 
     .ac-col6 {
-        width: 15.65%;
-        float: left;
+        width: calc(100% / 6);
+    }
+
+    .ac-col7 {
+        width: calc(100% / 7);
     }
 
     .ac-w20 {
-        width: 19%;
-        float: left;
+        width: 20%;
     }
 
     .ac-w25 {
-        width: 24%;
-        float: left;
+        width: 25%;
     }
 
     .ac-w33 {
-        width: 31% !important;
-        float: left;
+        width: 33.33% !important;
     }
 
     .ac-w50 {
-        width: 49%;
-        float: left;
+        width: 50%;
+    }
+    
+    > div {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        margin-left: -10px;
+        margin-right: -10px;
     }
 
     h3 {
@@ -55,14 +62,15 @@
         }
         
         &.select {
-            margin-right: 1%;
-            background-color: #eee;
-            padding: 2px;
+            padding: 10px;
             -webkit-border-radius: 3px;
             -moz-border-radius: 3px;
             border-radius: 3px;
             margin-bottom: 5px;
             box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
 
             &:before {
                 font-size: 18px;
@@ -75,11 +83,18 @@
             &.no-icon select {
                 width: 100%;
             }
+            
+            &.with-label {
+                flex-wrap: wrap;
+                
+                &.value.select:before {
+                    width: auto;
+                }
+            }
 
             select {
-                width: 83%;
-                height: 25px;
-
+                background: #fafafa;
+                
                 option {
                     padding: 4px 0;
                 }
@@ -95,10 +110,17 @@
     }
 }
 
+@media (max-width: 1400px) {
+    #advancedFormContainer {
+        .ac-col7, .ac-col6 {
+            width: calc(100% / 4);
+        }
+    }
+}
+
 @media (max-width: 767px) {
     #advancedFormContainer .value.select {
-        width: 49%;
-        margin-right: 1%;
+        width: 50%;
     }
 }
 
@@ -113,6 +135,10 @@ html[data-color-scheme=dark] {
     #advancedFormContainer {
         h3:before {
             color: #fff;
+        }
+
+        .value.select select {
+            background: #000;
         }
 
         select:focus-visible {

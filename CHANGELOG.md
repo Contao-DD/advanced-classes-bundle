@@ -10,6 +10,10 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
+## [1.6.2](https://github.com/Contao-DD/advanced-classes-bundle/tree/1.6.2) – 2025-07-21
+
+- [Changed] Added grid-related classes to the Bulma set
+
 ## [1.6.1](https://github.com/Contao-DD/advanced-classes-bundle/tree/1.6.1) – 2024-05-28
 
 - [Fixed] Add missing Bootstrap 5 set.
