@@ -15,6 +15,7 @@ declare(strict_types=1);
 namespace ContaoDD\AdvancedClassesBundle\EventListener\DataContainer;
 
 use Contao\ArticleModel;
+use Contao\ContentModel;
 use Contao\DataContainer;
 use Contao\FormModel;
 use Contao\PageModel;
@@ -34,6 +35,10 @@ trait ListenerHelperTrait
 
     public function generateScriptTag($config): string
     {
+        if (null === $config) {
+            return '<span style="font-size:.8em;color:red;">&nbsp;🛈&nbsp;'.$GLOBALS['TL_LANG']['tl_content']['advancedCss']['noConfigMessage'].'</span>';
+        }
+
         if(false === $config[2]) {
             $GLOBALS['TL_CSS']['advanced_classes'] = 'bundles/contaoddadvancedclasses/css/advanced_classes.css|static';
             $GLOBALS['TL_CSS']['font-awesome'] = 'bundles/contaoddadvancedclasses/vendor/fontello/css/icon.css|static';
@@ -47,9 +52,21 @@ trait ListenerHelperTrait
         );
     }
 
-    public function getConfigOfRootPageByContentElementId($id): ?array
+    public function getConfigOfRootPageByContentElementId($activeRecord): ?array
     {
-        $rootPage = $this->findRootPageOfContentElement($id);
+        $pid = $activeRecord->pid;
+
+        // check if id of parent element is element_group
+        if ('tl_content' === $activeRecord->ptable) {
+            // get pid of content element
+            $content = ContentModel::findById($pid);
+
+            if (null !== $content) {
+                $pid = $content->pid;
+            }
+        }
+
+        $rootPage = $this->findRootPageOfContentElement($pid);
 
         if (null === $rootPage) {
             return null;
@@ -98,7 +115,11 @@ trait ListenerHelperTrait
 
     private function manipulateDca(DataContainer $dc, $field): void
     {
-        if (!$dc->id || 'edit' !== $this->requestStack->getCurrentRequest()->query->get('act')) {
+        if (
+            !$dc->id ||
+            'edit' !== $this->requestStack->getCurrentRequest()->query->get('act') &&
+            'editAll' !== $this->requestStack->getCurrentRequest()->query->get('act')
+        ) {
             return;
         }
 

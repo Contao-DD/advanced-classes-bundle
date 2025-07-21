@@ -53,7 +53,7 @@ class ContentListener
         }
         
         if (null === $config) {
-            $config = $this->getConfigOfRootPageByContentElementId((int) $dc->activeRecord->pid);
+            $config = $this->getConfigOfRootPageByContentElementId($dc->activeRecord);
         }
 
         return $this->generateScriptTag($config);

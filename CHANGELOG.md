@@ -10,10 +10,16 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
-## [1.6.0](https://github.com/Contao-DD/advanced-classes-bundle/tree/1.6.0) – 2024-02-27
+## [1.6.1](https://github.com/Contao-DD/advanced-classes-bundle/tree/1.6.1) – 2024-05-28
 
-- [Added] Add bootstrap 5 set
-- [Changed] Improve styling
+- [Fixed] Add missing Bootstrap 5 set.
+
+## [1.6.0](https://github.com/Contao-DD/advanced-classes-bundle/tree/1.6.0) – 2024-04-29
+
+- [Added] Bootstrap 5 set was added.
+- [Added] No configuration message was added.
+- [Fixed] Advanced Classes are now also available when editing multiple elements. The field has been reduced to a text field in this mode.
+- [Fixed] The incorrect display of elements in element groups has been fixed.
 
 ## [1.5.4](https://github.com/Contao-DD/advanced-classes-bundle/tree/1.5.4) – 2024-02-26
 
