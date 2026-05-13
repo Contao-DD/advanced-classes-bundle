@@ -12,7 +12,7 @@ Types of changes
 
 ## [1.6.3](https://github.com/Contao-DD/advanced-classes-bundle/tree/1.6.3) – 2026-05-13
 
-- [Fixed] Fixed advanced CSS class fields not loading correctly when Turbo is enabled in the Contao backend
+- [Fixed] Fixed advanced CSS class fields not loading correctly when Turbo is enabled in the Contao backend ([#26](https://github.com/Contao-DD/advanced-classes-bundle/issues/26))
 - [Fixed] Minor alignment improvements for select fields with icons
 
 ## [1.6.2](https://github.com/Contao-DD/advanced-classes-bundle/tree/1.6.2) – 2025-07-21
