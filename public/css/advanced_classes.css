@@ -47,6 +47,8 @@
     display: flex;
     align-items: center;
     flex-wrap: wrap; }
+    #advancedFormContainer .value.select:not(.with-label) {
+      flex-wrap: nowrap; }
     #advancedFormContainer .value.select:before {
       font-size: 18px;
       width: 12%;

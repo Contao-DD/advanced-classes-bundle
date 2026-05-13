@@ -72,6 +72,10 @@
             align-items: center;
             flex-wrap: wrap;
 
+            &:not(.with-label) {
+                flex-wrap: nowrap;
+            }
+
             &:before {
                 font-size: 18px;
                 width: 12%;
