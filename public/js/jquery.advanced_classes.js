@@ -2,6 +2,7 @@
 
     var AdvancedClasses = {
         onReady: function () {
+            if ($('#advancedFormContainer').length) return;
             this.json = '';
             this.rootElem = $('[data-contao--toggle-fieldset-id-value=advanced_classes_legend]');
             
@@ -21,6 +22,7 @@
                     }).fail(function (jqxhr, textStatus, error) {
                         var err = textStatus + ", " + error;
                     });
+
             }
         },
         buildForm: function () {
@@ -130,8 +132,18 @@
         }
     };
 
-    $(document).ready(function () {
-        AdvancedClasses.onReady()
-    });
+    window.AdvancedClasses = AdvancedClasses;
+
+    if (typeof Turbo === 'undefined') {
+        $(document).ready(function () {
+            window.AdvancedClasses.onReady();
+        });
+    }
 
 })(jQuery);
+
+if (typeof Turbo !== 'undefined') {
+    document.addEventListener("turbo:load", function () {
+        window.AdvancedClasses.onReady();
+    })
+}

@@ -47,18 +47,29 @@
     display: flex;
     align-items: center;
     flex-wrap: wrap; }
+    #advancedFormContainer .value.select:not(.with-label) {
+      flex-wrap: nowrap; }
     #advancedFormContainer .value.select:before {
       font-size: 18px;
-      width: 12%;
+      width: 35px;
       height: 30px;
       vertical-align: middle;
       line-height: 30px; }
     #advancedFormContainer .value.select.no-icon select {
       width: 100%; }
-    #advancedFormContainer .value.select.with-label {
-      flex-wrap: wrap; }
-      #advancedFormContainer .value.select.with-label.value.select:before {
-        width: auto; }
+    #advancedFormContainer .value.select.with-label:not(.no-icon) {
+      flex-wrap: wrap;
+      position: relative; }
+      #advancedFormContainer .value.select.with-label:not(.no-icon).value.select:before {
+        width: 35px;
+        position: absolute;
+        bottom: 13px;
+        left: 10px;
+        font-size: 18px;
+        height: 30px;
+        margin: 0; }
+      #advancedFormContainer .value.select.with-label:not(.no-icon) select, #advancedFormContainer .value.select.with-label:not(.no-icon) label {
+        margin-left: 35px; }
     #advancedFormContainer .value.select select {
       background: #fafafa; }
       #advancedFormContainer .value.select select option {

@@ -72,9 +72,13 @@
             align-items: center;
             flex-wrap: wrap;
 
+            &:not(.with-label) {
+                flex-wrap: nowrap;
+            }
+
             &:before {
                 font-size: 18px;
-                width: 12%;
+                width: 35px;
                 height: 30px;
                 vertical-align: middle;
                 line-height: 30px;
@@ -84,12 +88,23 @@
                 width: 100%;
             }
             
-            &.with-label {
+            &.with-label:not(.no-icon) {
                 flex-wrap: wrap;
+                position: relative;
                 
                 &.value.select:before {
-                    width: auto;
+                    width: 35px;
+                    position: absolute;
+                    bottom: 13px;
+                    left: 10px;
+                    font-size: 18px;
+                    height: 30px;
+                    margin: 0;
                 }
+
+              select, label {
+                margin-left: 35px;
+              }
             }
 
             select {
