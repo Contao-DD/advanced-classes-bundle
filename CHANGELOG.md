@@ -10,6 +10,10 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
+## [1.6.4](https://github.com/Contao-DD/advanced-classes-bundle/tree/1.6.4) – 2026-05-18
+
+- [Fixed] Duplicate display of "advanced CSS classes" field in the Downloads content element ([#25](https://github.com/Contao-DD/advanced-classes-bundle/issues/25))
+
 ## [1.6.3](https://github.com/Contao-DD/advanced-classes-bundle/tree/1.6.3) – 2026-05-18
 
 - [Fixed] Fixed advanced CSS class fields not loading correctly when Turbo is enabled in the Contao backend ([#26](https://github.com/Contao-DD/advanced-classes-bundle/issues/26))

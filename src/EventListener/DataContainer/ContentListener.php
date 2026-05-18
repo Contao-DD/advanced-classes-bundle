@@ -38,7 +38,6 @@ class ContentListener
     public function onLoad(DataContainer $dc = null): void
     {
         $this->manipulateDca($dc, 'cssID;');
-        $this->manipulateDca($dc, 'useHomeDir;');
     }
 
     #[AsCallback(table: 'tl_content', target: 'fields.advancedCss.xlabel')]
