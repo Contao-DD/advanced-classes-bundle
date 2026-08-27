@@ -10,6 +10,10 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
+## [1.7.0](https://github.com/Contao-DD/advanced-classes-bundle/tree/1.7.0) – 2026-08-27
+
+- [Changed] Allow Contao 6, remove support for Contao 4
+
 ## [1.6.3](https://github.com/Contao-DD/advanced-classes-bundle/tree/1.6.3) – 2026-05-18
 
 - [Fixed] Fixed advanced CSS class fields not loading correctly when Turbo is enabled in the Contao backend ([#26](https://github.com/Contao-DD/advanced-classes-bundle/issues/26))
