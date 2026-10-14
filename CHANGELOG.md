@@ -30,6 +30,7 @@ Types of changes
 - [Fixed] Unit test and test autoloading
 - [Changed] Use `DataContainer::getCurrentRecord()` instead of the deprecated `activeRecord`
 - [Removed] Service definition for the non-existent `OutputBackendTemplateListener`
+- [Removed] Unused `TL_PERMISSIONS` entry. Access to the field is controlled via the allowed fields of user groups.
 - [Removed] Bootstrap 2, Bootstrap 3 and Bootstrap 4 alpha sets as well as the unused generic Bootstrap set. Root pages and forms using one of them are reset by a migration.
 - [Changed] Updated README and composer.json (requirements, direct dependencies, suggestions, manager plugin conflict)
 
