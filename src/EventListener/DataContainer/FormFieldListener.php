@@ -33,7 +33,7 @@ class FormFieldListener
             return;
         }
 
-        $this->manipulateDca($dc, 'accesskey;');
+        $this->manipulateDca($dc, 'class');
     }
 
     #[AsCallback(table: 'tl_form_field', target: 'fields.advancedCss.xlabel')]

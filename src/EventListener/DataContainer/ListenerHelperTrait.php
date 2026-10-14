@@ -18,6 +18,7 @@ use Contao\ArticleModel;
 use Contao\CalendarEventsModel;
 use Contao\CalendarModel;
 use Contao\ContentModel;
+use Contao\CoreBundle\DataContainer\PaletteManipulator;
 use Contao\DataContainer;
 use Contao\FormModel;
 use Contao\Model;
@@ -136,7 +137,11 @@ trait ListenerHelperTrait
         return $calendarId ? CalendarModel::findById($calendarId)?->jumpTo : null;
     }
 
-    private function manipulateDca(DataContainer $dc, string $field): void
+    /**
+     * Adds the advanced classes legend after the expert legend of every palette that
+     * contains the given CSS field (e.g. "cssID" or "class").
+     */
+    private function manipulateDca(DataContainer $dc, string $cssField): void
     {
         $act = $this->requestStack->getCurrentRequest()?->query->get('act');
 
@@ -144,16 +149,27 @@ trait ListenerHelperTrait
             return;
         }
 
-        $palettes = &$GLOBALS['TL_DCA'][$dc->table]['palettes'];
+        $manipulator = PaletteManipulator::create()
+            ->addLegend('advanced_classes_legend', 'expert_legend')
+            ->addField('advancedCss', 'advanced_classes_legend', PaletteManipulator::POSITION_APPEND)
+        ;
 
-        foreach ($palettes as $key => $value) {
-            if ('__selector__' === $key || !\is_string($value)) {
+        foreach ($GLOBALS['TL_DCA'][$dc->table]['palettes'] ?? [] as $name => $palette) {
+            if ('__selector__' === $name || !\is_string($palette)) {
                 continue;
             }
 
-            if (str_contains($value, $field)) {
-                $palettes[$key] = str_replace($field, $field.';{advanced_classes_legend},advancedCss;', $value);
+            if ($this->paletteHasField($palette, $cssField) && !$this->paletteHasField($palette, 'advancedCss')) {
+                $manipulator->applyToPalette($name, $dc->table);
             }
         }
+    }
+
+    private function paletteHasField(string $palette, string $field): bool
+    {
+        // Remove the legends and compare the field names
+        $fields = preg_split('/[,;]/', preg_replace('/\{[^}]*\}/', '', $palette), -1, PREG_SPLIT_NO_EMPTY);
+
+        return \in_array($field, array_map('trim', $fields), true);
     }
 }

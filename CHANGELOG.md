@@ -13,6 +13,9 @@ Types of changes
 ## Unreleased
 
 - [Changed] The set selection shows the set titles instead of file paths
+- [Changed] The advanced classes field is added to all palettes with a CSS field using the `PaletteManipulator`
+- [Added] Advanced classes for explanation, fieldset, radio, checkbox, upload and ALTCHA form fields
+- [Fixed] The advanced classes field is no longer shown twice in the downloads element
 - [Changed] Backend script rewritten in vanilla JavaScript, jQuery is no longer required
 - [Changed] Set configuration is passed via data attributes instead of global JavaScript variables
 - [Fixed] Classes consisting of multiple values (e.g. `d-none d-md-block`) are now restored and replaced correctly

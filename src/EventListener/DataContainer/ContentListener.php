@@ -33,8 +33,7 @@ class ContentListener
             return;
         }
 
-        $this->manipulateDca($dc, 'cssID;');
-        $this->manipulateDca($dc, 'useHomeDir;');
+        $this->manipulateDca($dc, 'cssID');
     }
 
     #[AsCallback(table: 'tl_content', target: 'fields.advancedCss.xlabel')]

@@ -16,6 +16,7 @@ namespace ContaoDD\AdvancedClassesBundle\EventListener;
 
 use Contao\CoreBundle\DependencyInjection\Attribute\AsHook;
 use Contao\Form;
+use Contao\FormFieldsetStart;
 use Contao\Widget;
 
 #[AsHook('loadFormField')]
@@ -23,8 +24,17 @@ class LoadFormFieldListener
 {
     public function __invoke(Widget $widget, string $formId, array $formData, Form $form): Widget
     {
-        if ('' !== $form->ac_set && '' !== $widget->advancedCss) {
-            $widget->prefix .= ' '.$widget->advancedCss;
+        $advancedCss = trim((string) $widget->advancedCss);
+
+        if (!$form->ac_set || '' === $advancedCss) {
+            return $widget;
+        }
+
+        // The fieldset template does not output the prefix, only the class
+        if ($widget instanceof FormFieldsetStart) {
+            $widget->class = trim($widget->class.' '.$advancedCss);
+        } else {
+            $widget->prefix .= ' '.$advancedCss;
         }
 
         return $widget;
