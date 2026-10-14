@@ -28,9 +28,6 @@ use Contao\PageModel;
 trait ListenerHelperTrait
 {
     public array $sets = [
-        'bundles/contaoddadvancedclasses/sets/bootstrap2.json',
-        'bundles/contaoddadvancedclasses/sets/bootstrap3.json',
-        'bundles/contaoddadvancedclasses/sets/bootstrap4-alpha.json',
         'bundles/contaoddadvancedclasses/sets/bootstrap4.json',
         'bundles/contaoddadvancedclasses/sets/bootstrap5.json',
         'bundles/contaoddadvancedclasses/sets/materialize.json',
