@@ -46,9 +46,9 @@ trait ListenerHelperTrait
         $GLOBALS['TL_CSS']['advanced_classes_settings'] = 'bundles/contaoddadvancedclasses/css/advanced_classes_settings.css|static';
         
         return sprintf(
-            '<script>var advancedClassesSet = \'%s\';var defaultColumnWidth = \'%s\';</script>',
-            $config[0],
-            $config[1]
+            '<span hidden data-advanced-classes-set="%s" data-advanced-classes-default-column-width="%s"></span>',
+            htmlspecialchars((string) $config[0], ENT_QUOTES),
+            $config[1] ? '1' : '0'
         );
     }
 

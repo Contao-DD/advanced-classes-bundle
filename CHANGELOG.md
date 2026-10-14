@@ -10,6 +10,14 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
+## Unreleased
+
+- [Changed] Backend script rewritten in vanilla JavaScript, jQuery is no longer required
+- [Changed] Set configuration is passed via data attributes instead of global JavaScript variables
+- [Fixed] Classes consisting of multiple values (e.g. `d-none d-md-block`) are now restored and replaced correctly
+- [Fixed] Changing a select no longer removes an unrelated class when the text field was edited manually
+- [Security] Set labels and headlines are no longer inserted as HTML
+
 ## [1.7.0](https://github.com/Contao-DD/advanced-classes-bundle/tree/1.7.0) – 2026-08-27
 
 - [Changed] Allow Contao 6, remove support for Contao 4
