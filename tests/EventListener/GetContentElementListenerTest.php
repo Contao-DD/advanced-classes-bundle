@@ -5,7 +5,7 @@ declare(strict_types=1);
 /*
  * advanced-classes-bundle for Contao Open Source CMS
  *
- * Copyright (c) 2022 Contao Stammtisch Dresden
+ * Copyright (c) 2026 Contao Stammtisch Dresden
  *
  * @package advanced-classes
  * @author Mathias Arzberger <develop@pdir.de>
@@ -34,7 +34,7 @@ class GetContentElementListenerTest extends TestCase
         $this->assertSame($expected, (new GetContentElementListener())($model, $buffer, null));
     }
 
-    public function bufferProvider(): \Generator
+    public static function bufferProvider(): iterable
     {
         yield 'empty advanced css' => [
             '',

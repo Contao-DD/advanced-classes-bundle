@@ -9,7 +9,7 @@ use Symplify\EasyCodingStandard\Config\ECSConfig;
 $header = <<<'EOF'
     advanced-classes-bundle for Contao Open Source CMS
 
-    Copyright (c) %s Contao Stammtisch Dresden
+    Copyright (c) 2026 Contao Stammtisch Dresden
 
     @package advanced-classes
     @author Mathias Arzberger <develop@pdir.de>
@@ -22,6 +22,6 @@ return ECSConfig::configure()
         __DIR__.'/src',
         __DIR__.'/tests',
     ])
-    ->withConfiguredRule(HeaderCommentFixer::class, ['header' => sprintf($header, date('Y'))])
+    ->withConfiguredRule(HeaderCommentFixer::class, ['header' => $header])
     ->withSpacing(lineEnding: "\n")
 ;

@@ -5,7 +5,7 @@ declare(strict_types=1);
 /*
  * advanced-classes-bundle for Contao Open Source CMS
  *
- * Copyright (c) 2022 Contao Stammtisch Dresden
+ * Copyright (c) 2026 Contao Stammtisch Dresden
  *
  * @package advanced-classes
  * @author Mathias Arzberger <develop@pdir.de>
@@ -20,7 +20,8 @@ use Doctrine\DBAL\ArrayParameterType;
 use Doctrine\DBAL\Connection;
 
 /**
- * Resets root pages and forms that still use a set which has been removed from the bundle.
+ * Resets root pages and forms that still use a set which has been removed from
+ * the bundle.
  */
 class RemovedSetsMigration extends AbstractMigration
 {

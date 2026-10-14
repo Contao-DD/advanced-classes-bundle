@@ -5,7 +5,7 @@ declare(strict_types=1);
 /*
  * advanced-classes-bundle for Contao Open Source CMS
  *
- * Copyright (c) 2022 Contao Stammtisch Dresden
+ * Copyright (c) 2026 Contao Stammtisch Dresden
  *
  * @package advanced-classes
  * @author Mathias Arzberger <develop@pdir.de>
@@ -46,11 +46,11 @@ trait ListenerHelperTrait
             $GLOBALS['TL_CSS']['font-awesome'] = 'bundles/contaoddadvancedclasses/vendor/fontello/css/icon.css|static';
         }
         $GLOBALS['TL_CSS']['advanced_classes_settings'] = 'bundles/contaoddadvancedclasses/css/advanced_classes_settings.css|static';
-        
-        return sprintf(
+
+        return \sprintf(
             '<span hidden data-advanced-classes-set="%s" data-advanced-classes-default-column-width="%s"></span>',
             htmlspecialchars((string) $config[0], ENT_QUOTES),
-            $config[1] ? '1' : '0'
+            $config[1] ? '1' : '0',
         );
     }
 
@@ -70,7 +70,7 @@ trait ListenerHelperTrait
             return null;
         }
 
-        $pageId = match (($record['ptable'] ?? '') ?: 'tl_article') {
+        $pageId = match ($record['ptable'] ?? '' ?: 'tl_article') {
             'tl_article' => ArticleModel::findById($record['pid'])?->pid,
             'tl_news' => $this->getJumpToOfNews((int) $record['pid']),
             'tl_calendar_events' => $this->getJumpToOfEvent((int) $record['pid']),
