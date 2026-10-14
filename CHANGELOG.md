@@ -27,6 +27,7 @@ Types of changes
 - [Changed] Use `DataContainer::getCurrentRecord()` instead of the deprecated `activeRecord`
 - [Removed] Service definition for the non-existent `OutputBackendTemplateListener`
 - [Removed] Bootstrap 2, Bootstrap 3 and Bootstrap 4 alpha sets as well as the unused generic Bootstrap set. Root pages and forms using one of them are reset by a migration.
+- [Changed] Updated README and composer.json (requirements, direct dependencies, suggestions, manager plugin conflict)
 
 ## [1.7.0](https://github.com/Contao-DD/advanced-classes-bundle/tree/1.7.0) – 2026-08-27
 
