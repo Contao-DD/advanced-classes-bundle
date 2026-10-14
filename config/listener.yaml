@@ -4,6 +4,9 @@ services:
 
   advanced_classes.listener.data_container.ac_set:
     class: ContaoDD\AdvancedClassesBundle\EventListener\DataContainer\AcSetListener
+    arguments:
+      - '%kernel.project_dir%'
+      - '%contao.web_dir%'
 
   advanced_classes.listener.data_container.content:
     class: ContaoDD\AdvancedClassesBundle\EventListener\DataContainer\ContentListener
