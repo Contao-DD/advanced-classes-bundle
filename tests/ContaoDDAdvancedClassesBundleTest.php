@@ -23,6 +23,6 @@ class ContaoDDAdvancedClassesBundleTest extends TestCase
     {
         $bundle = new ContaoDDAdvancedClassesExtension();
 
-        $this->assertInstanceOf('ContaoDD\AdvancedClassesBundle\ContaoDDAdvancedClassesExtension', $bundle);
+        $this->assertInstanceOf(ContaoDDAdvancedClassesExtension::class, $bundle);
     }
 }

@@ -17,6 +17,15 @@ Types of changes
 - [Fixed] Classes consisting of multiple values (e.g. `d-none d-md-block`) are now restored and replaced correctly
 - [Fixed] Changing a select no longer removes an unrelated class when the text field was edited manually
 - [Security] Set labels and headlines are no longer inserted as HTML
+- [Fixed] Content elements of events now use the calendar settings instead of looking up a news entry
+- [Fixed] Element groups inside news and events now resolve the correct root page
+- [Fixed] Missing news, events, archives or pages no longer cause errors in the backend
+- [Fixed] Advanced classes are no longer skipped when the element contains a similar class (e.g. `col-12` vs. `col-1`)
+- [Fixed] The class set of root pages and forms can be reset to "none"
+- [Fixed] Custom sets are no longer listed multiple times
+- [Fixed] Unit test and test autoloading
+- [Changed] Use `DataContainer::getCurrentRecord()` instead of the deprecated `activeRecord`
+- [Removed] Service definition for the non-existent `OutputBackendTemplateListener`
 
 ## [1.7.0](https://github.com/Contao-DD/advanced-classes-bundle/tree/1.7.0) – 2026-08-27
 

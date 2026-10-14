@@ -23,8 +23,5 @@ services:
   advanced_classes.listener.get_content_element:
     class: ContaoDD\AdvancedClassesBundle\EventListener\GetContentElementListener
 
-  advanced_classes.listener.output_backend_template:
-    class: ContaoDD\AdvancedClassesBundle\EventListener\OutputBackendTemplateListener
-
   advanced_classes.listener.parse_template:
     class: ContaoDD\AdvancedClassesBundle\EventListener\ParseTemplateListener

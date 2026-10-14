@@ -21,14 +21,30 @@ use Contao\CoreBundle\DependencyInjection\Attribute\AsHook;
 class GetContentElementListener
 {
     /*
-     * manipulate the given template object to add advanced css to the existing css class
+     * add advanced css to the class attribute of the element's outermost tag
      */
     public function __invoke(ContentModel $contentModel, string $buffer, $element): string
     {
-        if (isset($contentModel->advancedCss) && '' !== $contentModel->advancedCss && false === strpos($buffer, $contentModel->advancedCss)) {
-            return preg_replace('/class="/', 'class="'.$contentModel->advancedCss.' ', $buffer, 1);
+        $advancedCss = preg_split('/\s+/', (string) $contentModel->advancedCss, -1, PREG_SPLIT_NO_EMPTY);
+
+        if (!$advancedCss) {
+            return $buffer;
         }
 
-        return $buffer;
+        return preg_replace_callback(
+            '/class="([^"]*)"/',
+            static function (array $matches) use ($advancedCss): string {
+                $existing = preg_split('/\s+/', $matches[1], -1, PREG_SPLIT_NO_EMPTY);
+                $missing = array_diff($advancedCss, $existing);
+
+                if (!$missing) {
+                    return $matches[0];
+                }
+
+                return 'class="'.implode(' ', [...$missing, ...$existing]).'"';
+            },
+            $buffer,
+            1
+        );
     }
 }

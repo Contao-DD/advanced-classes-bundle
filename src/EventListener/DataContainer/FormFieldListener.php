@@ -22,24 +22,25 @@ class FormFieldListener
 {
     use ListenerHelperTrait;
 
-    private $requestStack;
-
-    public function __construct(RequestStack $requestStack)
+    public function __construct(private readonly RequestStack $requestStack)
     {
-        $this->requestStack = $requestStack;
     }
 
     #[AsCallback(table: 'tl_form_field', target: 'config.onload')]
-    public function onLoad(DataContainer $dc = null): void
+    public function onLoad(DataContainer|null $dc = null): void
     {
+        if (null === $dc) {
+            return;
+        }
+
         $this->manipulateDca($dc, 'accesskey;');
     }
 
     #[AsCallback(table: 'tl_form_field', target: 'fields.advancedCss.xlabel')]
     public function onXlabel(DataContainer $dc): string
     {
-        $config = $this->getConfigOfFormId($dc->activeRecord->pid);
+        $pid = $dc->getCurrentRecord()['pid'] ?? null;
 
-        return $this->generateScriptTag($config);
+        return $this->generateScriptTag($pid ? $this->getConfigOfFormId($pid) : null);
     }
 }

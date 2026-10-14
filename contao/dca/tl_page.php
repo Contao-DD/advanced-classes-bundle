@@ -24,7 +24,7 @@ PaletteManipulator::create()
 $GLOBALS['TL_DCA']['tl_page']['fields']['ac_set'] = [
     'inputType' => 'select',
     'reference' => &$GLOBALS['TL_LANG']['tl_page'],
-    'eval' => ['tl_class' => 'w50'],
+    'eval' => ['includeBlankOption' => true, 'tl_class' => 'w50'],
     'sql' => "varchar(255) NOT NULL default ''"
 ];
 

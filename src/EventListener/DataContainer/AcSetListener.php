@@ -26,7 +26,7 @@ class AcSetListener
     {
         // add custom sets
         if (isset($GLOBALS['customAdvancedClassesSets']) && \is_array($GLOBALS['customAdvancedClassesSets'])) {
-            $this->sets = array_merge($this->sets, $GLOBALS['customAdvancedClassesSets']);
+            return array_values(array_unique(array_merge($this->sets, $GLOBALS['customAdvancedClassesSets'])));
         }
 
         return $this->sets;
