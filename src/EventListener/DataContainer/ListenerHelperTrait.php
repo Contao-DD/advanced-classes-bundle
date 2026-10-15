@@ -94,7 +94,9 @@ trait ListenerHelperTrait
         }
 
         // The last parent is the root page
-        return $parentPages->last();
+        $models = $parentPages->getModels();
+
+        return end($models) ?: null;
     }
 
     public function getConfigOfFormId($id): array|null
@@ -122,8 +124,9 @@ trait ListenerHelperTrait
         }
 
         $archiveId = NewsModel::findById($newsId)?->pid;
+        $jumpTo = $archiveId ? NewsArchiveModel::findById($archiveId)?->jumpTo : null;
 
-        return $archiveId ? NewsArchiveModel::findById($archiveId)?->jumpTo : null;
+        return $jumpTo ? (int) $jumpTo : null;
     }
 
     private function getJumpToOfEvent(int $eventId): int|null
@@ -133,8 +136,9 @@ trait ListenerHelperTrait
         }
 
         $calendarId = CalendarEventsModel::findById($eventId)?->pid;
+        $jumpTo = $calendarId ? CalendarModel::findById($calendarId)?->jumpTo : null;
 
-        return $calendarId ? CalendarModel::findById($calendarId)?->jumpTo : null;
+        return $jumpTo ? (int) $jumpTo : null;
     }
 
     /**
