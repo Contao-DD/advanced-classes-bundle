@@ -56,9 +56,11 @@ EN:
 Upgrade
 -------
 
-DE: Die Sets für Bootstrap 2, Bootstrap 3 und Bootstrap 4 alpha wurden entfernt. Startseiten und Formulare, die eines dieser Sets nutzen, werden beim Aktualisieren der Datenbank auf „kein Set“ zurückgesetzt. Wer ein entferntes Set weiter braucht, kann es aus einer älteren Version kopieren und als eigenes Set registrieren (siehe unten).
+**2.0**
 
-EN: The Bootstrap 2, Bootstrap 3 and Bootstrap 4 alpha sets have been removed. Root pages and forms using one of these sets are reset to "no set" when updating the database. If you still need a removed set, copy it from an older version and register it as a custom set (see below).
+DE: Die Erweiterung lädt im Backend kein jQuery mehr. Erweiterungen, die sich darauf verlassen haben, müssen jQuery selbst einbinden. Die Sets für Bootstrap 2, Bootstrap 3 und Bootstrap 4 alpha wurden entfernt. Startseiten und Formulare, die eines dieser Sets nutzen, werden beim Aktualisieren der Datenbank auf „kein Set“ zurückgesetzt. Wer ein entferntes Set weiter braucht, kann es aus einer älteren Version kopieren und als eigenes Set registrieren (siehe unten).
+
+EN: The extension no longer loads jQuery in the backend. Extensions that relied on this have to load jQuery themselves. The Bootstrap 2, Bootstrap 3 and Bootstrap 4 alpha sets have been removed. Root pages and forms using one of these sets are reset to "no set" when updating the database. If you still need a removed set, copy it from an older version and register it as a custom set (see below).
 
 
 Eigenes Set / Custom Set
