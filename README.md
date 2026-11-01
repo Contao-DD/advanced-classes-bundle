@@ -3,34 +3,36 @@ Contao Advanced Classes
 
 [![Latest Stable Version](https://poser.pugx.org/contao-dd/advanced-classes-bundle/v/stable)](https://packagist.org/packages/contao-dd/advanced-classes-bundle) [![Total Downloads](https://poser.pugx.org/contao-dd/advanced-classes-bundle/downloads)](https://packagist.org/packages/contao-dd/advanced-classes-bundle) [![Latest Unstable Version](https://poser.pugx.org/contao-dd/advanced-classes-bundle/v/unstable)](https://packagist.org/packages/contao-dd/advanced-classes-bundle) [![License](https://poser.pugx.org/contao-dd/advanced-classes-bundle/license)](https://packagist.org/packages/contao-dd/advanced-classes-bundle)
 
-Das Modul erweitert die CSS-Klassen der Contao Elemente durch selbst definierbare Sets an CSS-Klassen. Redakteure und Admins können über Select-Felder schnell auf vordefinierte CSS-Klassen zugreifen.
+Das Modul erweitert die CSS-Klassen der Contao-Inhaltselemente und Formularfelder durch selbst definierbare Sets an CSS-Klassen. Redakteure und Admins können über Select-Felder schnell auf vordefinierte CSS-Klassen zugreifen.
 
-Über unseren Konfigurator (noch in der Entwicklung) lassen sich die Sets auf einfache Weise an eure Anforderungen anpassen.
-
-Für [Bootstrap](https://getbootstrap.com/), [Materialize](https://materializecss.com/), [Bulma](https://bulma.io/) und [Spectre.css](https://picturepan2.github.io/spectre/) wird bereits ein vordefiniertes Set für Spaltenbreite, Spalten-Offset, Reihenfolge (Pull/Push) und Sichtbarkeit mitgeliefert.
+Für [Bootstrap 4 und 5](https://getbootstrap.com/), [Materialize](https://materializecss.com/), [Bulma](https://bulma.io/) und [Spectre.css](https://picturepan2.github.io/spectre/) wird bereits ein vordefiniertes Set für Spaltenbreite, Spalten-Offset, Reihenfolge und Sichtbarkeit mitgeliefert.
 
 
 About
 -----
 
-Extend the css classes of Contao elements.
+Extend the CSS classes of Contao content elements and form fields with predefined sets of CSS classes. Editors and admins can pick the classes via select fields.
+
+Predefined sets for column width, offset, order and visibility are included for [Bootstrap 4 and 5](https://getbootstrap.com/), [Materialize](https://materializecss.com/), [Bulma](https://bulma.io/) and [Spectre.css](https://picturepan2.github.io/spectre/).
 
 **Supported Entities**
-headline, text, list, table, accordion, slider, code, markdown, hyperlink, toplink, image, gallery, player, youtube, download, downloads, teaser, module 
+All content elements with CSS settings (including content elements of news and events) and form fields.
 
 
 Screenshots
 -----------
 
-![Setting classes for bootstrap](http://pdir.de/contao-dd/advanced-classes-screenshot1-contao4.png)
-![Local settings](http://pdir.de/contao-dd/advanced-classes-screenshot2-contao4.png)
+![Setting classes for bootstrap](https://pdir.de/contao-dd/advanced-classes-screenshot1-contao4.png)
+![Local settings](https://pdir.de/contao-dd/advanced-classes-screenshot2-contao4.png)
 
 
 Systemvoraussetzungen / System requirements
 -------------------
 
-* [Contao 5](https://github.com/contao/contao)
-* [Contao 5 Managed Edition](https://github.com/contao/managed-edition)
+* [Contao](https://github.com/contao/contao) 5.3 or 6
+* PHP 8.1 or higher (Contao 6 requires PHP 8.4)
+
+Für Contao 4 nutze bitte Version 1.6 / For Contao 4 please use version 1.6.
 
 
 Installation & Configuration
@@ -38,17 +40,27 @@ Installation & Configuration
 
 DE:
 
-* Installiere die Erweiterung über den Contao Manager
+* Installiere die Erweiterung über den Contao Manager oder mit `composer require contao-dd/advanced-classes-bundle`
 * Aktualisiere die Datenbank
-* Wähle das CSS-Klassen-Set in deiner Website-Startseite aus
+* Wähle das CSS-Klassen-Set in deiner Website-Startseite (für Inhaltselemente) bzw. im Formular (für Formularfelder) aus
 * Setze die gewünschten Klassen in den Elementen
 
 EN:
 
-* Install the extension via the contao manager
+* Install the extension via the Contao Manager or with `composer require contao-dd/advanced-classes-bundle`
 * Update your database
-* Select CSS Class Set in the root page settings
-* Set the extended class of every element you wish
+* Select the CSS class set in the root page settings (for content elements) or in the form settings (for form fields)
+* Set the classes of every element you wish
+
+
+Upgrade
+-------
+
+**2.0**
+
+DE: Die Erweiterung lädt im Backend kein jQuery mehr. Erweiterungen, die sich darauf verlassen haben, müssen jQuery selbst einbinden. Die Sets für Bootstrap 2, Bootstrap 3 und Bootstrap 4 alpha wurden entfernt. Startseiten und Formulare, die eines dieser Sets nutzen, werden beim Aktualisieren der Datenbank auf „kein Set“ zurückgesetzt. Wer ein entferntes Set weiter braucht, kann es aus einer älteren Version kopieren und als eigenes Set registrieren (siehe unten).
+
+EN: The extension no longer loads jQuery in the backend. Extensions that relied on this have to load jQuery themselves. The Bootstrap 2, Bootstrap 3 and Bootstrap 4 alpha sets have been removed. Root pages and forms using one of these sets are reset to "no set" when updating the database. If you still need a removed set, copy it from an older version and register it as a custom set (see below).
 
 
 Eigenes Set / Custom Set
@@ -56,11 +68,11 @@ Eigenes Set / Custom Set
 
 DE:
 
-* Lege eine JSON-Datei an ([Beispiel](https://github.com/Contao-DD/advanced-classes-bundle/blob/master/src/Resources/public/sets/spectre.json)) und lege sie z. B. im files-Ordner ab
+* Lege eine JSON-Datei an ([Beispiel](https://github.com/Contao-DD/advanced-classes-bundle/blob/master/public/sets/bootstrap5.json)) und lege sie z. B. im files-Ordner ab
 * Lege folgende Datei an oder bearbeite sie: **contao/config/config.php**
-* Füge in der config.php folgendes ein um das Set zu registrieren. Anschließend muss der Cache im Contao Manager geleert werden.
+* Füge in der config.php folgendes ein, um das Set zu registrieren. Anschließend muss der Cache im Contao Manager geleert werden.
 
-```
+```php
 <?php
 
 $GLOBALS['customAdvancedClassesSets'][] = '/files/sets/custom-set.json';
@@ -70,11 +82,11 @@ $GLOBALS['customAdvancedClassesSets'][] = '/files/sets/custom-set.json';
 
 EN:
 
-* Create a json file ([Example](https://github.com/Contao-DD/advanced-classes-bundle/blob/master/src/Resources/public/sets/spectre.json)), e.g. in the files directory
-* Create the following file or edit them: **app/Resources/contao/config/config.php**
-* Paste this code in the config.php to registrate the set. Than you should clear the cache in the contao manager.
+* Create a JSON file ([Example](https://github.com/Contao-DD/advanced-classes-bundle/blob/master/public/sets/bootstrap5.json)), e.g. in the files directory
+* Create or edit the following file: **contao/config/config.php**
+* Add this code to the config.php to register the set. Then clear the cache in the Contao Manager.
 
-```
+```php
 <?php
 
 $GLOBALS['customAdvancedClassesSets'][] = '/files/sets/custom-set.json';
@@ -85,4 +97,4 @@ $GLOBALS['customAdvancedClassesSets'][] = '/files/sets/custom-set.json';
 
 License
 ---------------
-LGPL-3.0+
+LGPL-3.0-or-later

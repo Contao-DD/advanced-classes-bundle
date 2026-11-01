@@ -1,3 +1,7 @@
 services:
   _defaults:
     autoconfigure: true
+
+  ContaoDD\AdvancedClassesBundle\Migration\RemovedSetsMigration:
+    arguments:
+      - '@database_connection'

@@ -5,7 +5,7 @@ declare(strict_types=1);
 /*
  * advanced-classes-bundle for Contao Open Source CMS
  *
- * Copyright (c) 2022 Contao Stammtisch Dresden
+ * Copyright (c) 2026 Contao Stammtisch Dresden
  *
  * @package advanced-classes
  * @author Mathias Arzberger <develop@pdir.de>
@@ -15,17 +15,20 @@ declare(strict_types=1);
 namespace ContaoDD\AdvancedClassesBundle\EventListener\DataContainer;
 
 use Contao\ArticleModel;
+use Contao\CalendarEventsModel;
+use Contao\CalendarModel;
 use Contao\ContentModel;
+use Contao\CoreBundle\DataContainer\PaletteManipulator;
 use Contao\DataContainer;
 use Contao\FormModel;
+use Contao\Model;
+use Contao\NewsArchiveModel;
+use Contao\NewsModel;
 use Contao\PageModel;
 
 trait ListenerHelperTrait
 {
     public array $sets = [
-        'bundles/contaoddadvancedclasses/sets/bootstrap2.json',
-        'bundles/contaoddadvancedclasses/sets/bootstrap3.json',
-        'bundles/contaoddadvancedclasses/sets/bootstrap4-alpha.json',
         'bundles/contaoddadvancedclasses/sets/bootstrap4.json',
         'bundles/contaoddadvancedclasses/sets/bootstrap5.json',
         'bundles/contaoddadvancedclasses/sets/materialize.json',
@@ -39,77 +42,74 @@ trait ListenerHelperTrait
             return '<span style="font-size:.8em;color:red;">&nbsp;🛈&nbsp;'.$GLOBALS['TL_LANG']['tl_content']['advancedCss']['noConfigMessage'].'</span>';
         }
 
-        if(false === $config[2]) {
+        if (!$config[2]) {
             $GLOBALS['TL_CSS']['advanced_classes'] = 'bundles/contaoddadvancedclasses/css/advanced_classes.css|static';
             $GLOBALS['TL_CSS']['font-awesome'] = 'bundles/contaoddadvancedclasses/vendor/fontello/css/icon.css|static';
         }
         $GLOBALS['TL_CSS']['advanced_classes_settings'] = 'bundles/contaoddadvancedclasses/css/advanced_classes_settings.css|static';
-        
-        return sprintf(
-            '<script>var advancedClassesSet = \'%s\';var defaultColumnWidth = \'%s\';</script>',
-            $config[0],
-            $config[1]
+
+        return \sprintf(
+            '<span hidden data-advanced-classes-set="%s" data-advanced-classes-default-column-width="%s"></span>',
+            htmlspecialchars((string) $config[0], ENT_QUOTES),
+            $config[1] ? '1' : '0',
         );
     }
 
-    public function getConfigOfRootPageByContentElementId($activeRecord): ?array
+    /**
+     * Returns the config of the root page the given content element belongs to.
+     */
+    public function getConfigOfContentElement(array|null $record): array|null
     {
-        $pid = $activeRecord->pid;
+        // Resolve nested elements (e.g. element groups) to the top level element
+        $depth = 0;
 
-        // check if id of parent element is element_group
-        if ('tl_content' === $activeRecord->ptable) {
-            // get pid of content element
-            $content = ContentModel::findById($pid);
-
-            while ($content->ptable === 'tl_content') {
-                $content = ContentModel::findById($content->pid);
-            }
-
-            if (null !== $content) {
-                $pid = $content->pid;
-            }
+        while (null !== $record && 'tl_content' === ($record['ptable'] ?? null) && $depth++ < 50) {
+            $record = ContentModel::findById($record['pid'])?->row();
         }
 
-        $rootPage = $this->findRootPageOfContentElement($pid);
-
-        if (null === $rootPage) {
+        if (null === $record) {
             return null;
         }
 
-        return $this->getConfig($rootPage);
+        $pageId = match ($record['ptable'] ?? '' ?: 'tl_article') {
+            'tl_article' => ArticleModel::findById($record['pid'])?->pid,
+            'tl_news' => $this->getJumpToOfNews((int) $record['pid']),
+            'tl_calendar_events' => $this->getJumpToOfEvent((int) $record['pid']),
+            default => null,
+        };
+
+        return $this->getConfig($this->findRootPage($pageId ? (int) $pageId : null));
     }
 
-    public function findRootPageOfContentElement($id): ?PageModel
+    public function findRootPage(int|null $pageId): PageModel|null
     {
-        // get pid of article
-        $article = ArticleModel::findById($id);
-
-        if (null === $article) {
+        if (!$pageId) {
             return null;
         }
 
-        $parentPage = PageModel::findParentsById($article->pid);
+        $parentPages = PageModel::findParentsById($pageId);
 
-        if (null === $parentPage) {
+        if (null === $parentPages) {
             return null;
         }
 
-        return $parentPage[\count($parentPage) - 1];
+        // The last parent is the root page
+        $models = $parentPages->getModels();
+
+        return end($models) ?: null;
     }
 
-    public function getConfigOfFormId($id): ?array
+    public function getConfigOfFormId($id): array|null
     {
-        $form = FormModel::findById($id);
+        return $this->getConfig(FormModel::findById($id));
+    }
 
-        if (null === $form) {
+    public function getConfig(Model|null $model): array|null
+    {
+        if (null === $model || !$model->ac_set) {
             return null;
         }
 
-        return $this->getConfig($form);
-    }
-
-    public function getConfig($model): array
-    {
         return [
             $model->ac_set,
             $model->ac_defaultColumnWidth,
@@ -117,26 +117,63 @@ trait ListenerHelperTrait
         ];
     }
 
-    private function manipulateDca(DataContainer $dc, $field): void
+    private function getJumpToOfNews(int $newsId): int|null
     {
-        if (
-            !$dc->id ||
-            'edit' !== $this->requestStack->getCurrentRequest()->query->get('act') &&
-            'editAll' !== $this->requestStack->getCurrentRequest()->query->get('act')
-        ) {
+        if (!class_exists(NewsModel::class)) {
+            return null;
+        }
+
+        $archiveId = NewsModel::findById($newsId)?->pid;
+        $jumpTo = $archiveId ? NewsArchiveModel::findById($archiveId)?->jumpTo : null;
+
+        return $jumpTo ? (int) $jumpTo : null;
+    }
+
+    private function getJumpToOfEvent(int $eventId): int|null
+    {
+        if (!class_exists(CalendarEventsModel::class)) {
+            return null;
+        }
+
+        $calendarId = CalendarEventsModel::findById($eventId)?->pid;
+        $jumpTo = $calendarId ? CalendarModel::findById($calendarId)?->jumpTo : null;
+
+        return $jumpTo ? (int) $jumpTo : null;
+    }
+
+    /**
+     * Adds the advanced classes legend after the expert legend of every palette that
+     * contains the given CSS field (e.g. "cssID" or "class").
+     */
+    private function manipulateDca(DataContainer $dc, string $cssField): void
+    {
+        $act = $this->requestStack->getCurrentRequest()?->query->get('act');
+
+        if (!$dc->id || !\in_array($act, ['edit', 'editAll'], true)) {
             return;
         }
 
-        $dc = &$GLOBALS['TL_DCA'][$dc->table];
+        $manipulator = PaletteManipulator::create()
+            ->addLegend('advanced_classes_legend', 'expert_legend')
+            ->addField('advancedCss', 'advanced_classes_legend', PaletteManipulator::POSITION_APPEND)
+        ;
 
-        foreach ($dc['palettes'] as $key => $value) {
-            if ('__selector__' === $value) {
+        foreach ($GLOBALS['TL_DCA'][$dc->table]['palettes'] ?? [] as $name => $palette) {
+            if ('__selector__' === $name || !\is_string($palette)) {
                 continue;
             }
 
-            if (!\is_array($value) && str_contains($value, $field)) {
-                $dc['palettes'][$key] = str_replace($field, $field.';{advanced_classes_legend},advancedCss;', $value);
+            if ($this->paletteHasField($palette, $cssField) && !$this->paletteHasField($palette, 'advancedCss')) {
+                $manipulator->applyToPalette($name, $dc->table);
             }
         }
+    }
+
+    private function paletteHasField(string $palette, string $field): bool
+    {
+        // Remove the legends and compare the field names
+        $fields = preg_split('/[,;]/', preg_replace('/\{[^}]*\}/', '', $palette), -1, PREG_SPLIT_NO_EMPTY);
+
+        return \in_array($field, array_map('trim', $fields), true);
     }
 }

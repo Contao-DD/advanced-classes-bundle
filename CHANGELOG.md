@@ -10,6 +10,36 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
+## [2.0.0](https://github.com/Contao-DD/advanced-classes-bundle/tree/2.0.0) – 2026-11-01
+
+**Breaking changes**
+
+- Contao 4 is no longer supported. Use version 1.6 for Contao 4.
+- The bundle no longer loads jQuery in the backend. Extensions that relied on this have to load jQuery themselves.
+- The Bootstrap 2, Bootstrap 3 and Bootstrap 4 alpha sets have been removed. Root pages and forms using one of them are reset to "no set" by a migration. If you still need one of these sets, copy it from version 1.6 and register it as a custom set.
+
+**Changes**
+
+- [Added] Support for Contao 6
+- [Added] Advanced classes for explanation, fieldset, radio, checkbox, upload and ALTCHA form fields
+- [Changed] The set selection shows the set titles instead of file paths
+- [Changed] The "Bootstrap 4 Beta" set has been renamed to "Bootstrap 4"
+- [Changed] The backend script has been rewritten in vanilla JavaScript
+- [Changed] The advanced classes field is added to every palette with a CSS field
+- [Fixed] Content elements of events now use the calendar settings instead of looking up a news entry
+- [Fixed] Element groups inside news and events now resolve the correct root page
+- [Fixed] Missing news, events, archives or pages no longer cause errors in the backend
+- [Fixed] Advanced classes are no longer skipped when the element contains a similar class (e.g. `col-12` vs. `col-1`)
+- [Fixed] Classes consisting of multiple values (e.g. `d-none d-md-block`) are now restored and replaced correctly
+- [Fixed] Changing a select no longer removes an unrelated class when the text field was edited manually
+- [Fixed] The advanced classes field is no longer shown twice in the downloads element
+- [Fixed] The class set of root pages and forms can be reset to "none"
+- [Fixed] Custom sets are no longer listed multiple times
+- [Removed] The generic, unused Bootstrap set
+- [Removed] The unused `TL_PERMISSIONS` entry. Access to the field is controlled via the allowed fields of user groups.
+- [Security] Set labels and headlines are no longer inserted as HTML
+
+
 ## [1.6.4](https://github.com/Contao-DD/advanced-classes-bundle/tree/1.6.4) – 2026-11-01
 
 - [Fixed] Duplicate display of "advanced CSS classes" field in the Downloads content element ([#25](https://github.com/Contao-DD/advanced-classes-bundle/issues/25))
