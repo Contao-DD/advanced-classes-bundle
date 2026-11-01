@@ -10,7 +10,13 @@
       <trans-unit id="FMD.advanced_classes">
         <source>Advanced Classes</source>
       </trans-unit>
-      <trans-unit id="MSC.advanced_classes_legend">
+      <trans-unit id="tl_content.advanced_classes_legend">
+        <source>Advanced CSS classes</source>
+      </trans-unit>
+      <trans-unit id="tl_form.advanced_classes_legend">
+        <source>Advanced CSS classes</source>
+      </trans-unit>
+      <trans-unit id="tl_form_field.advanced_classes_legend">
         <source>Advanced CSS classes</source>
       </trans-unit>
       <trans-unit id="tl_content.advancedCss.0">
