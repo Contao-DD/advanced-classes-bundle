@@ -39,6 +39,7 @@ Types of changes
 - [Removed] The unused `TL_PERMISSIONS` entry. Access to the field is controlled via the allowed fields of user groups.
 - [Security] Set labels and headlines are no longer inserted as HTML
 
+
 ## [1.6.4](https://github.com/Contao-DD/advanced-classes-bundle/tree/1.6.4) – 2026-11-01
 
 - [Fixed] Duplicate display of "advanced CSS classes" field in the Downloads content element ([#25](https://github.com/Contao-DD/advanced-classes-bundle/issues/25))
