@@ -10,9 +10,10 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
-## [1.6.4](https://github.com/Contao-DD/advanced-classes-bundle/tree/1.6.4) – 2026-05-18
+## [1.6.4](https://github.com/Contao-DD/advanced-classes-bundle/tree/1.6.4) – 2026-11-01
 
 - [Fixed] Duplicate display of "advanced CSS classes" field in the Downloads content element ([#25](https://github.com/Contao-DD/advanced-classes-bundle/issues/25))
+- [Fixed] The CSS class from `advancedCss` is not applied at all levels when there are nested groups of elements with the same class ([#29](https://github.com/Contao-DD/advanced-classes-bundle/issues/29))
 
 ## [1.6.3](https://github.com/Contao-DD/advanced-classes-bundle/tree/1.6.3) – 2026-05-18
 
