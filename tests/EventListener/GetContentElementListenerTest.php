@@ -66,6 +66,12 @@ class GetContentElementListenerTest extends TestCase
             '<div class="col-1 content-text"><span class="col-12">',
         ];
 
+        yield 'adds class to outer element if a nested element already has it' => [
+            'col-xl-6',
+            '<div class="content-element-group"><div class="col-xl-6 content-element-group"><p>x</p></div></div>',
+            '<div class="col-xl-6 content-element-group"><div class="col-xl-6 content-element-group"><p>x</p></div></div>',
+        ];
+
         yield 'without class attribute' => [
             'col-6',
             '<div>',
